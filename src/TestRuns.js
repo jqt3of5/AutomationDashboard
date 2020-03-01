@@ -34,8 +34,12 @@ class TestRuns extends React.Component {
                         test.targetBuildNumber = doc.get("TargetBuildNumber")
                         test.targetCommitHash = doc.get("TargetCommitHash")
                         test.codeLink = doc.get("CodeLink")
-                        test.start = doc.get("TestStart").toDate().toString()
-                        test.end = doc.get("TestEnd").toDate().toString()
+                        test.start = doc.get("TestStart").toDate().toLocaleString()
+                        test.end = doc.get("TestEnd").toDate().toLocaleString()
+                        let milis = (doc.get("TestEnd").toDate() - doc.get("TestStart").toDate())
+                        let time = new Date(0,0,0,0,0,0,milis)
+
+                        test.duration = time.getHours() + ":"+time.getMinutes() + ":" + time.getSeconds()
                         test.testParams = doc.get("TestParams")
                         test.videoURL = doc.get("VideoURL")
                         test.status = doc.get("TestStatus")
@@ -89,6 +93,7 @@ class TestRuns extends React.Component {
                                 <TestHeaderRow columnName={"Target Branch"} sortDirection={this.sortDirection} onClick={this.sortBy}/>
                                 <TestHeaderRow columnName={"Start"}         sortDirection={this.sortDirection} onClick={this.sortBy}/>
                                 <TestHeaderRow columnName={"End"}           sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                                <TestHeaderRow columnName={"Duration"}           sortDirection={this.sortDirection} onClick={this.sortBy}/>
                                 <TestHeaderRow columnName={"Status"}        sortDirection={this.sortDirection} onClick={this.sortBy}/>
                             </tr>
                         </thead>
@@ -103,6 +108,7 @@ class TestRuns extends React.Component {
                                         targetBranch={test.targetBranchName}
                                         testStart={test.start}
                                         testEnd={test.end}
+                                        testDuration={test.duration}
                                         status={test.status}/>)
                                 })
                             }
@@ -133,6 +139,7 @@ function TestRow(props) {
             <td>{props.targetBranch}</td>
             <td>{props.testStart}</td>
             <td>{props.testEnd}</td>
+            <td>{props.testDuration}</td>
             <td>{props.status}</td>
         </tr>
     )
