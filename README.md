@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AutomationDashboard
+Unit tests, Integration tests and UI automation tests are the backbone of automated testing. And it's typical for there to be thousands of tests
+at any given time. Automation Dashboard is a solution to that problem, so that test runs can be tracked, and failures are easy to visualize. 
+
+### Dependencies
 
 ## Available Scripts
 
