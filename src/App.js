@@ -4,23 +4,30 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div class="app">
+        <Header title="Automation"></Header>
+        <Sidebar></Sidebar>
+      </div>
+   );
 }
 
+function Header(props) {
+  return (
+      <header class="header">
+          <div class="header-logo">
+              {props.title}
+          </div>
+      </header>)
+}
+
+function Sidebar(){
+  return (
+      <div class="sidebar">
+
+      </div>)
+}
+
+function SidebarItem(props){
+    return <div class="sidebar-item"> {props.title}</div>
+}
 export default App;
