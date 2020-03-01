@@ -7,7 +7,8 @@ class TestRuns extends React.Component {
     {
         super(props);
         this.state = {
-            tests :[]
+            tests :[],
+            sort: ["", undefined]
         }
     }
 
@@ -53,18 +54,42 @@ class TestRuns extends React.Component {
         )
     }
 
+    //Experiemental public class field syntax for binding this to thesemethods.
+    sortBy = (columnName) =>
+    {
+        //TODO: toggle logic broken
+        function nextDirection(direction)
+        {
+            switch(direction)
+            {
+                case "descending":
+                    return "ascending"
+                case "ascending":
+                    return undefined
+                default:
+                    return "descending"
+            }
+        }
+        this.setState((state, props) =>({sort:[columnName,state.sort[0] == columnName ? nextDirection(state.sort[1]) : "descending"]}))
+    }
+
+    sortDirection = (columnName) =>
+    {
+        return this.state.sort[0] == columnName ? this.state.sort[1] : undefined
+    }
+
     render () {
         return (
                 <div class={"table-root"}>
                     <table class={"test-run-table"}>
                         <thead class={"header"}>
                             <tr>
-                                <th class ="root-header-cell primary-cell header-cell-alignLeft">Fixture</th>
-                                <th class={"header-cell-alignLeft"}>Test</th>
-                                <th className={"header-cell-alignLeft"}>Target Branch</th>
-                                <th class={"header-cell-alignLeft"}>Start</th>
-                                <th className={"header-cell-alignLeft"}>End</th>
-                                <th className={"header-cell-alignLeft"}>Status</th>
+                                <TestHeaderRow columnName={"Fixture"}       sortDirection={this.sortDirection} onClick={this.sortBy} primary={true}/>
+                                <TestHeaderRow columnName={"Test"}          sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                                <TestHeaderRow columnName={"Target Branch"} sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                                <TestHeaderRow columnName={"Start"}         sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                                <TestHeaderRow columnName={"End"}           sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                                <TestHeaderRow columnName={"Status"}        sortDirection={this.sortDirection} onClick={this.sortBy}/>
                             </tr>
                         </thead>
                         <tbody>
@@ -87,10 +112,20 @@ class TestRuns extends React.Component {
         )
     }
 }
-
+function TestHeaderRow(props)
+{
+    return (
+        <th className={"header-cell header-cell-alignLeft " + (props.primary ? "primary-cell" : "")} onClick={() => props.onClick(props.columnName)}>
+            <span>
+                {props.columnName}
+                <ArrowIcon direction={props.sortDirection(props.columnName)}/>
+            </span>
+        </th>
+    )
+}
 function TestRow(props) {
     return (
-        <tr>
+        <tr className={"test-body-row"} onClick={props.onClick}>
             <td className={"primary-cell"}>{props.fixtureName}</td>
             <td>
                 <a href={props.codeLink}>{props.testName}</a>
@@ -100,6 +135,29 @@ function TestRow(props) {
             <td>{props.testEnd}</td>
             <td>{props.status}</td>
         </tr>
+    )
+}
+
+function ArrowIcon(props)
+{
+    function getDirectionClass()
+    {
+        switch(props.direction)
+        {
+            case "descending":
+                return "arrow-icon-descending"
+            case "ascending":
+                return "arrow-icon-ascending"
+            default:
+                return ""
+        }
+    }
+
+    return (
+        <svg className={"arrow-icon " + getDirectionClass()} focusable="false"
+             viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+            <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path>
+        </svg>
     )
 }
 

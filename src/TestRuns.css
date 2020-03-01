@@ -15,16 +15,59 @@
 .primary-cell {
     padding-left: 16px;
 }
-.root-header-cell {
+
+thead .primary-cell{
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+tbody .primary-cell {
     padding-right: 16px;
     padding-top: 14px;
     padding-bottom: 14px;
 }
 
+.header-cell {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.test-body-row {
+    font-size: 12px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.header-cell span {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
 .header-cell-alignLeft {
     text-align: left;
 }
 
 tbody tr:hover {
     background-color: lightgrey;
+}
+
+.arrow-icon {
+    margin-left: 4px;
+    height: 18px;
+    width: 18px;
+    opacity: 0;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.arrow-icon-ascending {
+    transform: rotate(180deg);
+    opacity: 100%;
+}
+.arrow-icon-descending {
+
+    opacity: 100%;
+}
+
+.arrow-icon:hover {
+    opacity:100%;
 }
