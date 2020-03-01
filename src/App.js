@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
       <div class="app">
-        <Header title="Automation"></Header>
+        <Header title="Automation Dashboard"></Header>
         <Sidebar></Sidebar>
       </div>
    );
@@ -23,7 +23,9 @@ function Header(props) {
 function Sidebar(){
   return (
       <div class="sidebar">
-
+        <SidebarItem title={"test1"}/>
+        <SidebarItem title={"test1"}/>
+        <SidebarItem title={"test1"}/>
       </div>)
 }
 

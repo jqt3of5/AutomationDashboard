@@ -28,10 +28,16 @@
   min-height:90vh;
   max-width: 15vw;
   background-color: #42474f;
+
 }
 
+.sidebar-item:hover {
+  background-color: #5a616c;
+}
 .sidebar-item {
-
+  min-height: 5vh;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
 .App-link {
