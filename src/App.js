@@ -1,35 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './Sidebar';
+import TestRuns from "./TestRuns";
 
-function App() {
-  return (
-      <div class="app">
-        <Header title="Automation Dashboard"></Header>
-        <Sidebar></Sidebar>
-      </div>
-   );
+class App extends React.Component
+{
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div class="app">
+                <Sidebar></Sidebar>
+                <div className={"content"}>
+                    <Header title={"Test Runs"}></Header>
+                    <TestRuns></TestRuns>
+                </div>
+            </div>
+        );
+    }
 }
 
-function Header(props) {
-  return (
-      <header class="header">
-          <div class="header-logo">
-              {props.title}
-          </div>
-      </header>)
+function Header (props){
+    return (
+        <div>
+            <div className={"content-header"}>
+                <p className={"content-header-inner"}>{props.title}</p>
+            </div>
+        </div>
+
+    )
 }
 
-function Sidebar(){
-  return (
-      <div class="sidebar">
-        <SidebarItem title={"test1"}/>
-        <SidebarItem title={"test1"}/>
-        <SidebarItem title={"test1"}/>
-      </div>)
-}
-
-function SidebarItem(props){
-    return <div class="sidebar-item"> {props.title}</div>
-}
 export default App;
