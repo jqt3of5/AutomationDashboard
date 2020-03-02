@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './common.css';
 import Sidebar from './Sidebar';
 import TestRuns from "./TestRuns";
+import TestSteps from "./TestSteps";
 
 class App extends React.Component
 {
@@ -16,7 +18,12 @@ class App extends React.Component
                 <Sidebar></Sidebar>
                 <div className={"content"}>
                     <Header title={"Test Runs"}></Header>
-                    <TestRuns></TestRuns>
+                    <TestSteps
+                        fixtureName={"Fixture"}
+                        testName={"Test"}
+                        runId={"Y8Cssyp7AVaX0dwxrRrK"}
+                    ></TestSteps>
+
                 </div>
             </div>
         );
