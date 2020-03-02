@@ -2,9 +2,9 @@ import React from 'react';
 import './TestRuns.css';
 import './common.css';
 import firebase from './Firestore.js'
-import {TestRun} from "./Firestore";
+import {Test} from "./Firestore";
 
-class TestRuns extends React.Component {
+export default class TestList extends React.Component {
     constructor(props)
     {
         super(props);
@@ -23,23 +23,23 @@ class TestRuns extends React.Component {
     componentWillUnmount() {
     }
 
-    fetchTestRuns()
+    fetchTests()
     {
         var tests = []
         const db = firebase.firestore();
-        return db.collection("TestRuns").get().then(
+        return db.collection("TestsFixtures").get().then(
             query => {
                 query.forEach(doc => {
-                        let test = new TestRun(doc)
-                        test.testFixture.then(tf => {
-                            test.testFixtureName = tf.get("Name")
-                            test.test.then(t => {
-                                test.testName = t.get("Name")
-                                tests.push(test)
-                                this.setState({tests:tests})
-                            })
+                    let test = new Test(doc)
+                    test.testFixture.then(tf => {
+                        test.testFixtureName = tf.get("Name")
+                        test.test.then(t => {
+                            test.testName = t.get("Name")
+                            tests.push(test)
+                            this.setState({tests:tests})
                         })
                     })
+                })
             }
         )
     }
@@ -70,31 +70,31 @@ class TestRuns extends React.Component {
 
     render () {
         return (
-                <div class={"table-root"}>
-                    <table class={"test-run-table"}>
-                        <thead class={"header"}>
-                            <tr>
-                                <TestHeaderCell columnName={"Fixture"}       sortDirection={this.sortDirection} onClick={this.sortBy} primary={true}/>
-                                <TestHeaderCell columnName={"Test"}          sortDirection={this.sortDirection} onClick={this.sortBy}/>
-                                <TestHeaderCell columnName={"Target Branch"} sortDirection={this.sortDirection} onClick={this.sortBy}/>
-                                <TestHeaderCell columnName={"Start"}         sortDirection={this.sortDirection} onClick={this.sortBy}/>
-                                <TestHeaderCell columnName={"End"}           sortDirection={this.sortDirection} onClick={this.sortBy}/>
-                                <TestHeaderCell columnName={"Duration"}      sortDirection={this.sortDirection} onClick={this.sortBy}/>
-                                <TestHeaderCell columnName={"Status"}        sortDirection={this.sortDirection} onClick={this.sortBy}/>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {console.log("testrows: " + this.state.tests.length)}
-                            {this.state.tests.map(test => {
-                                   return  (<TestRow key={this.state.tests.indexOf(test)} test={test}/>)
-                                })
-                            }
-                            {
-                                this.state.tests.length > 0 && Array.from(Array(100), (x, i) => i +1).map(i => <TestRow key={i} test={this.state.tests[0]}/>)
-                            }
-                        </tbody>
-                    </table>
-                </div>
+            <div class={"table-root"}>
+                <table class={"test-run-table"}>
+                    <thead class={"header"}>
+                    <tr>
+                        <TestHeaderCell columnName={"Fixture"}       sortDirection={this.sortDirection} onClick={this.sortBy} primary={true}/>
+                        <TestHeaderCell columnName={"Test"}          sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                        <TestHeaderCell columnName={"Target Branch"} sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                        <TestHeaderCell columnName={"Start"}         sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                        <TestHeaderCell columnName={"End"}           sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                        <TestHeaderCell columnName={"Duration"}      sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                        <TestHeaderCell columnName={"Status"}        sortDirection={this.sortDirection} onClick={this.sortBy}/>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {console.log("testrows: " + this.state.tests.length)}
+                    {this.state.tests.map(test => {
+                        return  (<TestRow key={this.state.tests.indexOf(test)} test={test}/>)
+                    })
+                    }
+                    {
+                        this.state.tests.length > 0 && Array.from(Array(100), (x, i) => i +1).map(i => <TestRow key={i} test={this.state.tests[0]}/>)
+                    }
+                    </tbody>
+                </table>
+            </div>
         )
     }
 }
@@ -148,4 +148,5 @@ function ArrowIcon(props)
     )
 }
 
-export default TestRuns;
+
+
