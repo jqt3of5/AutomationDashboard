@@ -13,6 +13,18 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 export default firebase;
 
+export class Test {
+    constructor(doc) {
+
+    }
+}
+
+export class TestFixture {
+    constructor(doc) {
+
+    }
+}
+
 export class TestRun {
     constructor(doc) {
         this.automationAgent = doc.get("AutomationAgent")

@@ -5,6 +5,7 @@ import './common.css';
 import Sidebar from './Sidebar';
 import TestRuns from "./TestRuns";
 import TestSteps from "./TestSteps";
+import TestList from "./TestList";
 
 class App extends React.Component
 {
@@ -18,11 +19,12 @@ class App extends React.Component
                 <Sidebar></Sidebar>
                 <div className={"content"}>
                     <Header title={"Test Runs"}></Header>
-                    <TestSteps
+                    <TestList></TestList>
+                    {/*<TestSteps
                         fixtureName={"Fixture"}
                         testName={"Test"}
                         runId={"Y8Cssyp7AVaX0dwxrRrK"}
-                    ></TestSteps>
+                    ></TestSteps>*/}
 
                 </div>
             </div>
