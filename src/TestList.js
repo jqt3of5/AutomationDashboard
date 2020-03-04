@@ -14,9 +14,7 @@ export default class TestList extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchTestRuns().then(
-            result => {}
-        )
+        this.fetchTests()
     }
 
     componentWillUnmount() {
@@ -26,17 +24,16 @@ export default class TestList extends React.Component {
     {
         var tests = []
         const db = firebase.firestore();
-        return db.collection("TestsFixtures").get().then(
+        return db.collection("Tests").get().then(
             query => {
                 query.forEach(doc => {
                     let test = new Test(doc)
+
                     test.testFixture.then(tf => {
                         test.testFixtureName = tf.get("Name")
-                        test.test.then(t => {
-                            test.testName = t.get("Name")
-                            tests.push(test)
-                            this.setState({tests:tests})
-                        })
+                        tests.push(test)
+
+                        this.setState({tests:tests})
                     })
                 })
             }
@@ -44,7 +41,7 @@ export default class TestList extends React.Component {
     }
 
     render () {
-        return <Table columns={[{"TestFixture":"testFixture"}, {"Test":"test"}]} data={this.state.tests}></Table>
+        return <Table columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests}></Table>
     }
 }
 

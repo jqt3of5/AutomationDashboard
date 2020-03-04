@@ -15,13 +15,17 @@ export default firebase;
 
 export class Test {
     constructor(doc) {
-
+        this.name = doc.get("Name")
+        this.description = doc.get("Description")
+        this.testFixture = doc.get("TestFixture").get()
     }
 }
 
 export class TestFixture {
     constructor(doc) {
-
+        this.name = doc.get("Name")
+        this.description = doc.get("Description")
+        this.namespace = doc.get("Namespace")
     }
 }
 
