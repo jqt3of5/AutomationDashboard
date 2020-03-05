@@ -4,6 +4,7 @@ import firebase from './Firestore.js'
 import {Test} from "./Firestore";
 import Table from "./Shared/Table"
 
+
 export default class TestList extends React.Component {
     constructor(props)
     {
@@ -11,6 +12,8 @@ export default class TestList extends React.Component {
         this.state = {
             tests :[],
         }
+
+        this.db = firebase.firestore()
     }
 
     componentDidMount() {
@@ -23,25 +26,26 @@ export default class TestList extends React.Component {
     fetchTests()
     {
         var tests = []
-        const db = firebase.firestore();
-        return db.collection("Tests").get().then(
-            query => {
-                query.forEach(doc => {
-                    let test = new Test(doc)
+        return this.db
+            .collection("Tests")
+            .get().then(
+                query => {
+                    query.forEach(doc => {
+                        let test = new Test(doc)
 
-                    test.testFixture.then(tf => {
-                        test.testFixtureName = tf.get("Name")
-                        tests.push(test)
+                        test.testFixture.then(tf => {
+                            test.testFixtureName = tf.get("Name")
+                            tests.push(test)
 
-                        this.setState({tests:tests})
+                            this.setState({tests:tests})
+                        })
                     })
-                })
-            }
+                }
         )
     }
 
     render () {
-        return <Table columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests}></Table>
+        return <Table columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests} onRowSelected={""}></Table>
     }
 }
 

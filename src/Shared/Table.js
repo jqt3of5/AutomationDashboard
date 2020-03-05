@@ -7,6 +7,7 @@ export default class Table extends React.Component {
     {
         super(props);
     }
+    
     componentDidMount() {
     }
     componentWillUnmount() {
