@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4860d550-2a00-4fbb-a50f-795d60b14034" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Shared/Table.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Firestore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firestore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestRuns.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRuns.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestRuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRuns.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -27,7 +29,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -44,6 +45,11 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jqt3o\WebstormProjects\automation_visualization\src\Shared" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">

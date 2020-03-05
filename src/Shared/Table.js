@@ -1,6 +1,6 @@
 import React from 'react';
-import './TestRuns.css';
-import './common.css';
+import './Table.css';
+import '../common.css';
 
 export default class Table extends React.Component {
     constructor(props)
@@ -14,7 +14,7 @@ export default class Table extends React.Component {
 
     render () {
         return (
-            <table class={"test-run-table"}>
+            <table>
                 <thead class={"header"}>
                     <tr>
                         {Object.keys(this.props.columns).map((column, i) => {

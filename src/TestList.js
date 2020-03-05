@@ -2,7 +2,7 @@ import React from 'react';
 import './common.css';
 import firebase from './Firestore.js'
 import {Test} from "./Firestore";
-import Table from "./Table"
+import Table from "./Shared/Table"
 
 export default class TestList extends React.Component {
     constructor(props)

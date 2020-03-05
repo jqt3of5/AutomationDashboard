@@ -10,7 +10,6 @@ class TestRuns extends React.Component {
         super(props);
         this.state = {
             tests :[],
-            sort: ["", undefined]
         }
     }
 
