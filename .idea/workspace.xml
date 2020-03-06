@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4860d550-2a00-4fbb-a50f-795d60b14034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Firebase/Fixture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase/FixtureRun.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase/Test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase/TestRun.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Firebase/TestStep.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FixtureList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default_copy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Firestore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firebase/Firestore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shared/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestRuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRuns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +37,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -116,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583456103100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Built out the firebase classes a little better, now building the various pages">
+      <created>1583458119085</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583458119085</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,18 +136,31 @@
     <MESSAGE value="Got the sortanimations working" />
     <MESSAGE value="Refactored a bit, things were too fractured. Added routing, and the table" />
     <MESSAGE value="rows are now linkable" />
-    <option name="LAST_COMMIT_MESSAGE" value="rows are now linkable" />
+    <MESSAGE value="Built out the firebase classes a little better, now building the various pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Built out the firebase classes a little better, now building the various pages" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="814" y="357" key="#Closure_Linter" timestamp="1583458600927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="814" y="357" key="#Closure_Linter/0.0.1920.1040@0.0.1920.1040" timestamp="1583458600927" />
+    <state x="586" y="198" key="#Inspections" timestamp="1583458565445">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1583458565445" />
+    <state x="546" y="289" key="#JSCS" timestamp="1583458585591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="546" y="289" key="#JSCS/0.0.1920.1040@0.0.1920.1040" timestamp="1583458585591" />
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583377832004">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583377832004" />
-    <state x="484" y="115" width="731" height="594" key="CommitChangelistDialog2" timestamp="1583456102701">
+    <state x="484" y="115" width="731" height="594" key="CommitChangelistDialog2" timestamp="1583458118681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="387" y="91" width="731" height="594" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583381516904" />
-    <state x="484" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583456102701" />
+    <state x="484" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583458118681" />
     <state width="1899" height="179" key="GridCell.Tab.0.bottom" timestamp="1583455710724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -163,5 +185,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583032183898" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1583458387189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583458387189" />
   </component>
 </project>

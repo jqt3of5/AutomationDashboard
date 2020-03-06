@@ -4,7 +4,7 @@ import './App.css';
 import './common.css';
 import {Route, NavLink, HashRouter, BrowserRouter} from "react-router-dom"
 import TestRuns from "./TestRuns";
-import TestSteps from "./TestSteps";
+import TestRunDetails from "./TestRunDetails";
 import TestList from "./TestList";
 import FixtureList from "./FixtureList";
 
@@ -27,16 +27,18 @@ class App extends React.Component
                     <div className={"content"}>
                         <Header title={"Test Runs"}/>
                         <div className={"page"}>
-                            <Route exact path={"/tests"} component={TestList}/>
-                            <Route exact path={"/tests/:testid"} component={TestDetails}/>
                             <Route exact path={"/fixtures"} component={FixtureList}/>
                             <Route exact path={"/fixtures/:fixtureid"} component={FixtureDetails}/>
+
+                            <Route exact path={"/tests"} component={TestList}/>
+                            <Route exact path={"/tests/:testid"} component={TestDetails}/>
+
+                            <Route exact path={"/fixtureruns"} component={FixtureRuns}/>
+                            <Route exact path={"/fixtureruns/:fixturerunid"} component={FixtureRunDetails}/>
 
                             <Route exact path={"/testruns"} component={TestRuns}/>
                             <Route exact path={"/testruns/:testrunid"} component={TestRunDetails}/>
 
-                            <Route exact path={"/fixtureruns"} component={FixtureRuns}/>
-                            <Route exact path={"/fixtureruns/:fixturerunid"} component={FixtureRunDetails}/>
 
 
                             <Route exact path={"/preferences"}/>
