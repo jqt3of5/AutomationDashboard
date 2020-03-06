@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './common.css';
-import {Route, NavLink, HashRouter} from "react-router-dom"
+import {Route, NavLink, HashRouter, BrowserRouter} from "react-router-dom"
 import TestRuns from "./TestRuns";
 import TestSteps from "./TestSteps";
 import TestList from "./TestList";
@@ -17,7 +17,7 @@ class App extends React.Component
     render() {
         return (
             <div class="app">
-                <HashRouter>
+                <BrowserRouter>
                     <div class="sidebar">
                         <div className={"sidebar-header"}>Automation</div>
                         <NavLink to={"/tests"}><SidebarItem title={"Tests"} selected={"true"}/></NavLink>
@@ -32,7 +32,7 @@ class App extends React.Component
                             <Route path={"/preferences"}></Route>
                         </div>
                     </div>
-                </HashRouter>
+                </BrowserRouter>
 
             </div>
         );

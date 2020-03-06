@@ -1,6 +1,7 @@
 import React from 'react';
 import './Table.css';
 import '../common.css';
+import {Route, NavLink, HashRouter, BrowserRouter, Link} from "react-router-dom"
 
 export default class Table extends React.Component {
     constructor(props)
@@ -13,6 +14,9 @@ export default class Table extends React.Component {
     componentWillUnmount() {
     }
 
+    rowClicked(data) {
+
+    }
     render () {
         return (
             <table>
@@ -31,21 +35,27 @@ export default class Table extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                {this.props.data.map((data, i) => {
-                       return (
-                           <tr key={i} className={"body-row"}>
-                               {
-                                   Object.values(this.props.columns).map((column, i) => {
-                                        return (
-                                            <td class={i == 0 ? "primary-cell" : ""}>
-                                                {data[column]}
-                                            </td>
-                                        )
-                                    })
-                               }
-                           </tr>)
+                <BrowserRouter basename={this.props.baseUrl}>
+                    {this.props.data.map((data, i) => {
+                        return (
+                                <tr key={i} className={"body-row"} >
+                                    {
+                                        Object.values(this.props.columns).map((column, j) => {
+                                            return (
+                                                <td class={j == 0 ? "primary-cell" : ""}>
+                                                    <Link to={`/${i}`}>
+                                                        <div>{data[column]}</div>
+                                                    </Link>
+                                                </td>
+                                            )
+                                        })
+                                    }
+                                </tr>
+                            )
                     })
-                }
+                    }
+                </BrowserRouter>
+
                 </tbody>
             </table>
         )

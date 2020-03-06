@@ -53,7 +53,7 @@ class TestRuns extends React.Component {
             "Ended":"end",
             "Test Fixture":"testFixtureName",
             "Test Name":"testName"}
-        return <Table columns={columns} data={this.state.testRuns}/>
+        return <Table baseUrl={"/testruns"} columns={columns} data={this.state.testRuns}/>
     }
 }
 

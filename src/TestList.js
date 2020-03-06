@@ -45,7 +45,7 @@ export default class TestList extends React.Component {
     }
 
     render () {
-        return <Table columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests} onRowSelected={""}></Table>
+        return <Table baseUrl={"/tests"} columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests}></Table>
     }
 }
 
