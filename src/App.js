@@ -7,6 +7,7 @@ import TestRuns from "./TestRuns";
 import TestRunDetails from "./TestRunDetails";
 import TestList from "./TestList";
 import FixtureList from "./FixtureList";
+import {TestDetails} from "./TestDetails";
 
 class App extends React.Component
 {
@@ -16,9 +17,9 @@ class App extends React.Component
 
     render() {
         return (
-            <div class="app">
+            <div className="app">
                 <BrowserRouter>
-                    <div class="sidebar">
+                    <div className="sidebar">
                         <div className={"sidebar-header"}>Automation</div>
                         <NavLink to={"/tests"}><SidebarItem title={"Tests"} selected={"true"}/></NavLink>
                         <NavLink to={"/testruns"}><SidebarItem title={"Test Runs"}/></NavLink>
@@ -28,18 +29,15 @@ class App extends React.Component
                         <Header title={"Test Runs"}/>
                         <div className={"page"}>
                             <Route exact path={"/fixtures"} component={FixtureList}/>
-                            <Route exact path={"/fixtures/:fixtureid"} component={FixtureDetails}/>
+                            {
+                                //<Route exact path={"/fixtures/:fixtureid"} component={FixtureDetails}/>
+                                 }
 
                             <Route exact path={"/tests"} component={TestList}/>
                             <Route exact path={"/tests/:testid"} component={TestDetails}/>
 
-                            <Route exact path={"/fixtureruns"} component={FixtureRuns}/>
-                            <Route exact path={"/fixtureruns/:fixturerunid"} component={FixtureRunDetails}/>
-
                             <Route exact path={"/testruns"} component={TestRuns}/>
                             <Route exact path={"/testruns/:testrunid"} component={TestRunDetails}/>
-
-
 
                             <Route exact path={"/preferences"}/>
                         </div>
@@ -53,8 +51,8 @@ class App extends React.Component
 
 function SidebarItem(props){
     return (
-        <div class={"sidebar-item"}>
-            <div class={"selected-ribbon"}></div>
+        <div className={"sidebar-item"}>
+            <div className={"selected-ribbon"}></div>
             <PrefIcon/>
             <p>{props.title}</p>
         </div>)

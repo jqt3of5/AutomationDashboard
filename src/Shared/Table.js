@@ -17,11 +17,11 @@ export default class Table extends React.Component {
     render () {
         return (
             <table>
-                <thead class={"header"}>
+                <thead className={"header"}>
                     <tr>
                         {Object.keys(this.props.columns).map((column, i) => {
                             return (
-                                <th className={"header-cell header-cell-alignLeft " + (i == 0 ? "primary-cell" : "")}>
+                                <th key={i} className={"header-cell header-cell-alignLeft " + (i == 0 ? "primary-cell" : "")}>
                                     <span>
                                         {column}
                                         <ArrowIcon/>
@@ -39,7 +39,7 @@ export default class Table extends React.Component {
                                     {
                                         Object.values(this.props.columns).map((column, j) => {
                                             return (
-                                                <td class={j == 0 ? "primary-cell" : ""}>
+                                                <td key={j} className={j == 0 ? "primary-cell" : ""}>
                                                     <Link to={`/${i}`}>
                                                         <div>{data[column]}</div>
                                                     </Link>

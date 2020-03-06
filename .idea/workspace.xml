@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4860d550-2a00-4fbb-a50f-795d60b14034" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default_copy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default_copy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default_copy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Firebase/FixtureRun.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FixtureDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shared/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shared/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestRuns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRuns.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1YUwcKQBlYAhEpUY5xHDhaBhLBi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,13 +54,14 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.jscs" value="$USER_HOME$/AppData/Roaming/npm/node_modules/jscs" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default copy" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSHint" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -148,43 +156,56 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1583458565445" />
-    <state x="546" y="289" key="#JSCS" timestamp="1583458585591">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="437" y="148" key="#JSCS" timestamp="1583459908956">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="437" y="148" key="#JSCS/0.0.1536.824@0.0.1536.824" timestamp="1583459908956" />
     <state x="546" y="289" key="#JSCS/0.0.1920.1040@0.0.1920.1040" timestamp="1583458585591" />
+    <state x="498" y="195" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1583460574318">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="195" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1536.824@0.0.1536.824" timestamp="1583460574318" />
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583377832004">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583377832004" />
+    <state x="520" y="290" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583460647198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="290" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1583460647198" />
     <state x="484" y="115" width="731" height="594" key="CommitChangelistDialog2" timestamp="1583458118681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="387" y="91" width="731" height="594" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583381516904" />
     <state x="484" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583458118681" />
-    <state width="1899" height="179" key="GridCell.Tab.0.bottom" timestamp="1583455710724">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583375743595" />
-    <state width="1899" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state width="1899" height="179" key="GridCell.Tab.0.center" timestamp="1583455710724">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583375743594" />
-    <state width="1899" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state width="1899" height="179" key="GridCell.Tab.0.left" timestamp="1583455710724">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583375743594" />
-    <state width="1899" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state width="1899" height="179" key="GridCell.Tab.0.right" timestamp="1583455710724">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583375743595" />
-    <state width="1899" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state x="279" y="58" key="SettingsEditor" timestamp="1583032183898">
+    <state x="625" y="244" key="FileChooserDialogImpl" timestamp="1583460573496">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583032183898" />
+    <state x="625" y="244" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583460573496" />
+    <state width="1515" height="195" key="GridCell.Tab.0.bottom" timestamp="1583460631857">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583460631857" />
+    <state width="1899" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
+    <state width="1515" height="195" key="GridCell.Tab.0.center" timestamp="1583460631857">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583460631857" />
+    <state width="1899" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
+    <state width="1515" height="195" key="GridCell.Tab.0.left" timestamp="1583460631857">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583460631857" />
+    <state width="1899" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
+    <state width="1515" height="195" key="GridCell.Tab.0.right" timestamp="1583460631857">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583460631857" />
+    <state width="1899" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
+    <state x="279" y="58" key="SettingsEditor" timestamp="1583460624808">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583460624808" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1583458387189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

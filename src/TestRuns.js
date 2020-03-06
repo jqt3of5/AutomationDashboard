@@ -23,22 +23,24 @@ class TestRuns extends React.Component {
 
     fetchTestRuns()
     {
-        var tests = []
+        var testRuns = []
         const db = firebase.firestore();
-        return db
-            .collection("TestRuns")
-            .get()
-            .then(
+
+        var collection = db.collection("TestRuns")
+
+        if (this.props.testid !== undefined)
+        {
+            const test = db.collection("Tests").doc(this.props.testid)
+            collection = collection.where("Test", "==", test)
+        }
+
+        return collection.get().then(
                 query => {
                     query.forEach(doc => {
-                            TestRun(doc)
-                            test.testFixture.then(tf => {
-                                test.testFixtureName = tf.get("Name")
-                                test.test.then(t => {
-                                    test.testName = t.get("Name")
-                                    tests.push(test)
-                                    this.setState({testRuns:tests})
-                                })
+                            console.log(doc)
+                            TestRun.getTestRun(doc).then(testRun => {
+                                testRuns.push(testRun)
+                                this.setState({testRuns:testRuns})
                             })
                         })
                 }
