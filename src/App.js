@@ -6,7 +6,7 @@ import {Route, NavLink, HashRouter, BrowserRouter} from "react-router-dom"
 import TestRuns from "./TestRuns";
 import TestSteps from "./TestSteps";
 import TestList from "./TestList";
-import {TestRun} from "./Firestore";
+import FixtureList from "./FixtureList";
 
 class App extends React.Component
 {
@@ -25,11 +25,21 @@ class App extends React.Component
                         <NavLink to={"/preferences"}><SidebarItem title={"Preferences"}/></NavLink>
                     </div>
                     <div className={"content"}>
-                        <Header title={"Test Runs"}></Header>
+                        <Header title={"Test Runs"}/>
                         <div className={"page"}>
-                            <Route path={"/tests"} component={TestList}></Route>
-                            <Route path={"/testruns"} component={TestRuns}></Route>
-                            <Route path={"/preferences"}></Route>
+                            <Route exact path={"/tests"} component={TestList}/>
+                            <Route exact path={"/tests/:testid"} component={TestDetails}/>
+                            <Route exact path={"/fixtures"} component={FixtureList}/>
+                            <Route exact path={"/fixtures/:fixtureid"} component={FixtureDetails}/>
+
+                            <Route exact path={"/testruns"} component={TestRuns}/>
+                            <Route exact path={"/testruns/:testrunid"} component={TestRunDetails}/>
+
+                            <Route exact path={"/fixtureruns"} component={FixtureRuns}/>
+                            <Route exact path={"/fixtureruns/:fixturerunid"} component={FixtureRunDetails}/>
+
+
+                            <Route exact path={"/preferences"}/>
                         </div>
                     </div>
                 </BrowserRouter>

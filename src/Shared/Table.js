@@ -14,9 +14,6 @@ export default class Table extends React.Component {
     componentWillUnmount() {
     }
 
-    rowClicked(data) {
-
-    }
     render () {
         return (
             <table>
@@ -52,7 +49,7 @@ export default class Table extends React.Component {
                                     }
                                 </tr>
                             )
-                    })
+                        })
                     }
                 </BrowserRouter>
 

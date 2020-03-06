@@ -1,8 +1,9 @@
 import React from 'react';
 import './TestSteps.css';
 import './common.css';
-import firebase from './Firestore.js'
-import {TestRun, TestStep} from "./Firestore";
+import firebase from './Firebase/Firestore.js'
+import {TestStep} from "./Firebase/TestStep";
+import TestRun from "./Firebase/TestRun";
 
 export default class TestSteps extends React.Component
 {

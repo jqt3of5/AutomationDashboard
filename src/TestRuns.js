@@ -1,8 +1,8 @@
 import React from 'react';
 import './TestRuns.css';
 import './common.css';
-import firebase from './Firestore.js'
-import {TestRun} from "./Firestore";
+import firebase from './Firebase/Firestore.js'
+import TestRun from "./Firebase/TestRun";
 import Table from "./Shared/Table"
 
 class TestRuns extends React.Component {
@@ -31,7 +31,7 @@ class TestRuns extends React.Component {
             .then(
                 query => {
                     query.forEach(doc => {
-                            let test = new TestRun(doc)
+                            TestRun(doc)
                             test.testFixture.then(tf => {
                                 test.testFixtureName = tf.get("Name")
                                 test.test.then(t => {

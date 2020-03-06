@@ -1,16 +1,16 @@
 import React from 'react';
 import './common.css';
 import firebase from './Firebase/Firestore.js'
-import Test from "./Firebase/Test";
+import Fixture from "./Firebase/Fixture";
 import Table from "./Shared/Table"
 
 
-export default class TestList extends React.Component {
+export default class FixtureList extends React.Component {
     constructor(props)
     {
         super(props);
         this.state = {
-            tests :[],
+            fixtures :[],
         }
 
         this.db = firebase.firestore()
@@ -25,23 +25,23 @@ export default class TestList extends React.Component {
 
     fetchTests()
     {
-        var tests = []
-        this.db
-            .collection("Tests")
+        var fixtures = []
+        return this.db
+            .collection("Fixtures")
             .get().then(
                 query => {
                     query.forEach(doc => {
-                        Test.getTest(doc).then(test => {
-                            tests.push(test)
-                            this.setState({tests:tests})
+                        Fixture.getFixture(doc).then(fixture => {
+                            fixtures.push(test)
+                            this.setState({fixtures:fixtures})
                         })
                     })
                 }
-        )
+            )
     }
 
     render () {
-        return <Table baseUrl={"/tests"} columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests}></Table>
+        return <Table baseUrl={"/fixtures"} columns={{"TestFixture":"testFixtureName", "Description":"description"}} data={this.state.fixtures}></Table>
     }
 }
 
