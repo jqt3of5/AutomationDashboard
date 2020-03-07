@@ -1,6 +1,8 @@
 import Fixture from "./Fixture"
 export default class Test {
     constructor(doc) {
+        this.testId = doc.id
+
         this.name = doc.get("Name")
         this.description = doc.get("Description")
     }

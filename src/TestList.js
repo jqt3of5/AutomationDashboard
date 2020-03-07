@@ -2,7 +2,7 @@ import React from 'react';
 import './common.css';
 import firebase from './Firebase/Firestore.js'
 import Test from "./Firebase/Test";
-import Table from "./Shared/Table"
+import {RoutedTable} from "./Shared/Table"
 
 
 export default class TestList extends React.Component {
@@ -41,7 +41,7 @@ export default class TestList extends React.Component {
     }
 
     render () {
-        return <Table baseUrl={"/tests"} columns={{"TestFixture":"testFixtureName", "Test":"name"}} data={this.state.tests}></Table>
+        return <RoutedTable columns={{"TestFixture":"fixture.name", "Test":"name"}} idField = {"testId"} data={this.state.tests}></RoutedTable>
     }
 }
 

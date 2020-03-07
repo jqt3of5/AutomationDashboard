@@ -1,9 +1,11 @@
 import React from 'react';
 import './Table.css';
 import '../common.css';
-import {Route, NavLink, HashRouter, BrowserRouter, Link} from "react-router-dom"
+import {Route, NavLink, HashRouter, BrowserRouter, Link, withRouter} from "react-router-dom"
 
-export default class Table extends React.Component {
+Object.valueFromPath = (path, obj) => path.split(".").reduce((previousValue, currentValue) => previousValue[currentValue], obj)
+
+class Table extends React.Component {
     constructor(props)
     {
         super(props);
@@ -32,7 +34,7 @@ export default class Table extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                <BrowserRouter basename={this.props.baseUrl}>
+
                     {this.props.data.map((data, i) => {
                         return (
                                 <tr key={i} className={"body-row"} >
@@ -40,8 +42,8 @@ export default class Table extends React.Component {
                                         Object.values(this.props.columns).map((column, j) => {
                                             return (
                                                 <td key={j} className={j == 0 ? "primary-cell" : ""}>
-                                                    <Link to={`/${i}`}>
-                                                        <div>{data[column]}</div>
+                                                    <Link to={`${this.props.match.url}/${data[this.props.idField]}`} >
+                                                        <div>{Object.valueFromPath(column, data)}</div>
                                                     </Link>
                                                 </td>
                                             )
@@ -51,7 +53,6 @@ export default class Table extends React.Component {
                             )
                         })
                     }
-                </BrowserRouter>
 
                 </tbody>
             </table>
@@ -82,5 +83,6 @@ function ArrowIcon(props)
     )
 }
 
+export const RoutedTable = withRouter(Table)
 
 

@@ -2,8 +2,7 @@ import React from 'react';
 import './common.css';
 import firebase from './Firebase/Firestore.js'
 import Fixture from "./Firebase/Fixture";
-import Table from "./Shared/Table"
-
+import {RoutedTable} from "./Shared/Table";
 
 export default class FixtureList extends React.Component {
     constructor(props)
@@ -41,7 +40,10 @@ export default class FixtureList extends React.Component {
     }
 
     render () {
-        return <Table baseUrl={"/fixtures"} columns={{"TestFixture":"testFixtureName", "Description":"description"}} data={this.state.fixtures}></Table>
+        return <RoutedTable columns={{
+                "TestFixture": "testFixtureName",
+                "Description": "description"
+                }} data={this.state.fixtures}/>
     }
 }
 

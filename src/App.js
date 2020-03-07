@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './common.css';
-import {Route, NavLink, HashRouter, BrowserRouter} from "react-router-dom"
+import {Route, NavLink, HashRouter, BrowserRouter, Switch} from "react-router-dom"
 import TestRuns from "./TestRuns";
 import TestRunDetails from "./TestRunDetails";
 import TestList from "./TestList";
@@ -28,18 +28,18 @@ class App extends React.Component
                     <div className={"content"}>
                         <Header title={"Test Runs"}/>
                         <div className={"page"}>
-                            <Route exact path={"/fixtures"} component={FixtureList}/>
-                            {
-                                //<Route exact path={"/fixtures/:fixtureid"} component={FixtureDetails}/>
-                                 }
 
-                            <Route exact path={"/tests"} component={TestList}/>
-                            <Route exact path={"/tests/:testid"} component={TestDetails}/>
+                            <Switch>
+                                <Route exact path={"/fixtures"} component={FixtureList}/>
+                                <Route exact path={"/tests"} component={TestList}/>
+                                <Route exact path={"/tests/:testid"} component={TestDetails}/>
 
-                            <Route exact path={"/testruns"} component={TestRuns}/>
-                            <Route exact path={"/testruns/:testrunid"} component={TestRunDetails}/>
+                                <Route exact path={"/testruns"} component={TestRuns}/>
+                                <Route exact path={"/testruns/:testrunid"} component={TestRunDetails}/>
 
-                            <Route exact path={"/preferences"}/>
+                                <Route exact path={"/preferences"}/>
+                            </Switch>
+
                         </div>
                     </div>
                 </BrowserRouter>

@@ -3,7 +3,7 @@ import './TestRuns.css';
 import './common.css';
 import firebase from './Firebase/Firestore.js'
 import TestRun from "./Firebase/TestRun";
-import Table from "./Shared/Table"
+import Table, {RoutedTable} from "./Shared/Table"
 
 class TestRuns extends React.Component {
     constructor(props)
@@ -55,7 +55,7 @@ class TestRuns extends React.Component {
             "Ended":"end",
             "Test Fixture":"testFixtureName",
             "Test Name":"testName"}
-        return <Table baseUrl={"/testruns"} columns={columns} data={this.state.testRuns}/>
+        return <RoutedTable columns={columns} data={this.state.testRuns}/>
     }
 }
 
