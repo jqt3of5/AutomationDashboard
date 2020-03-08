@@ -26,7 +26,6 @@ fun Application.module(testing: Boolean = false) {
                 if (it.name == "test" && it.password == "password") UserIdPrincipal(it.name) else null }
         }
     }
-
     routing {
 
         static("/")
@@ -35,11 +34,21 @@ fun Application.module(testing: Boolean = false) {
             default("resources/index.html")
         }
         route("/api"){
-
-            route("/tests")
+            route("/testruns"){
+                get{
+                    call.respondText { "TestRuns" }
+                }
+                post {
+                    call.respondText { "TestrunAdded" }
+                }
+            }
+            route("/tests/{namespace}/{fixture}/{testname}")
             {
                 get {
-                    call.respondText { "tests" }
+                    call.respondText { "{}" }
+                }
+                post {
+                    call.respondText{"test added"}
                 }
                 route("/{testId}"){
                     get {
@@ -58,7 +67,6 @@ fun Application.module(testing: Boolean = false) {
                     }
                 }
             }
-
         }
 
        authenticate("myBasicAuth") {
