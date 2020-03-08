@@ -105,7 +105,9 @@
 
   align-items: center;
 }
-
+.end-sidebar-item {
+  margin-top:auto;
+}
 .sidebar-item:hover {
   background-color: #202e3b;
 }

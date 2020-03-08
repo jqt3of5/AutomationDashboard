@@ -61,7 +61,7 @@ fun Application.module(testing: Boolean = false) {
 
         }
 
-        authenticate("myBasicAuth") {
+       authenticate("myBasicAuth") {
             get("/protected/route/basic") {
                 val principal = call.principal<UserIdPrincipal>()!!
                 call.respondText("Hello ${principal.name}")

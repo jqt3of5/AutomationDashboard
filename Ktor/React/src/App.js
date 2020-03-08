@@ -44,7 +44,7 @@ class App extends React.Component
                                 <p>{"Test Runs"}</p>
                             </div>
                         </NavLink>
-                        <NavLink to={"/preferences"}>
+                        <NavLink to={"/preferences"} className={"end-sidebar-item"}>
                             <div className={"sidebar-item"}>
                                 <div className={"selected-ribbon"}></div>
                                 <SettingsIcon className={"sidebar-icon"}/>
