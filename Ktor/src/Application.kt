@@ -9,6 +9,8 @@ import io.ktor.html.*
 import kotlinx.html.*
 import kotlinx.css.*
 import io.ktor.auth.*
+import io.ktor.http.content.resources
+import io.ktor.http.content.static
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -25,22 +27,37 @@ fun Application.module(testing: Boolean = false) {
 
     routing {
         get("/") {
-            call.respondText("HELLO WORLD!", contentType = ContentType.Text.Plain)
-        }
-
-        get("/html-dsl") {
             call.respondHtml {
-                body {
-                    h1 { +"HTML" }
-                    ul {
-                        for (n in 1..10) {
-                            li { +"$n" }
-                        }
-                    }
-                }
+                 head {
+                       link(rel = "icon", href="/public/favicon.ico")
+                       link(rel = "manifest", href="/public/manifest.json")
+                     meta(charset="utf-8")
+                     meta (name="viewport", content = "width=device-width,initial-scale=1")
+                     meta (name="theme-color", content="#000000")
+                     link(rel="apple-touch-icon", href="/public/logo192.png")
+                     title {
+                         "Automation Dashboard"
+                     }
+                 }
+                 body {
+                     noScript {
+                         "You need to enable JavaScript to run this app."
+                     }
+                     script (type="text/javascript", src="/index.js"){}
+
+                     div {id = "root"}
+                 }
             }
         }
 
+        static("/public")
+        {
+            resources("React/public/")
+        }
+        static("/")
+        {
+            resources("React/src")
+        }
         get("/styles.css") {
             call.respondCss {
                 body {

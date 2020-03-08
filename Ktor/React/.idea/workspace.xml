@@ -2,7 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4860d550-2a00-4fbb-a50f-795d60b14034" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/AutomationDashboard.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default_copy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/Firestore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/Fixture.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/Test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/TestRun.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/TestStep.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FixtureDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FixtureList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shared/Table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Shared/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestRunDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestRuns.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestRuns.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestSteps.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.idea/inspectionProfiles/Project_Default_copy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Firebase/Firestore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Firebase/Fixture.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Firebase/Test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Firebase/TestRun.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Firebase/TestStep.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/FixtureDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/FixtureList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Shared/Table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/Shared/Table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestRunDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestRuns.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestRuns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/TestSteps.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/Application.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +107,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -36,6 +125,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -55,7 +145,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default copy" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -92,6 +182,7 @@
       <workItem from="1583010560797" duration="3377000" />
       <workItem from="1583031808383" duration="27132000" />
       <workItem from="1583553648857" duration="10120000" />
+      <workItem from="1583648367571" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="It hits firebase, and populates the test run with data :D">
       <created>1583090028115</created>
@@ -149,6 +240,9 @@
     <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="It hits firebase, and populates the test run with data :D" />
     <MESSAGE value="Got the sortanimations working" />
     <MESSAGE value="Refactored a bit, things were too fractured. Added routing, and the table" />
@@ -193,30 +287,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="625" y="244" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583460573496" />
-    <state width="1515" height="195" key="GridCell.Tab.0.bottom" timestamp="1583632791412">
+    <state width="1515" height="195" key="GridCell.Tab.0.bottom" timestamp="1583649439053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583632791412" />
+    <state width="1515" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583649439053" />
     <state width="1899" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state width="1515" height="195" key="GridCell.Tab.0.center" timestamp="1583632791411">
+    <state width="1515" height="195" key="GridCell.Tab.0.center" timestamp="1583649439052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583632791411" />
+    <state width="1515" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583649439052" />
     <state width="1899" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state width="1515" height="195" key="GridCell.Tab.0.left" timestamp="1583632791410">
+    <state width="1515" height="195" key="GridCell.Tab.0.left" timestamp="1583649439052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583632791410" />
+    <state width="1515" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583649439052" />
     <state width="1899" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state width="1515" height="195" key="GridCell.Tab.0.right" timestamp="1583632791411">
+    <state width="1515" height="195" key="GridCell.Tab.0.right" timestamp="1583649439053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583632791411" />
+    <state width="1515" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583649439053" />
     <state width="1899" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583455710724" />
-    <state x="219" y="47" key="SettingsEditor" timestamp="1583553996340">
+    <state x="219" y="47" key="SettingsEditor" timestamp="1583648389901">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="219" y="47" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583553996340" />
+    <state x="219" y="47" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583648389901" />
     <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1583468820444">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
