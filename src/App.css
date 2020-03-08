@@ -14,26 +14,12 @@
   margin-left: 10px;
 }
 
-.content {
+.page {
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
 }
 
-.content-header {
-  width: 100%;
-  display: flex;
-  flex: 0 0 auto;
-  border-bottom: 2px solid lightgrey;
-}
-
-.content-header-inner {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 16px;
-  padding-right: 24px;
-  font-size: 20px;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -51,16 +37,33 @@
   display:flex;
   flex-direction: column;
 }
-
+.expanded.sidebar {
+  width: 256px;
+  transition: width 1s;
+}
+.collapsed.sidebar {
+  width: 64px;
+  transition: width 1s;
+}
 .sidebar-header {
   height: 80px;
   display: flex;
   font-size: 25px;
   color: white;
   align-items: center;
+}
+.collapsed .sidebar-header {
+  margin-left:0px;
+}
+.menu-icon {
+    margin-left:auto;
+}
+.header-icon {
+  margin-left:auto;
+  margin-right:auto;
+
   margin-left: 40px;
 }
-
 .selected-ribbon {
   background-color: #ffb900;
   width: 8px;
@@ -85,7 +88,15 @@
 .active .selected-ribbon {
   visibility: visible;
 }
-
+.collapsed p {
+  visibility: collapse;
+}
+.collapsed .sidebar-item .sidebar-icon {
+  padding-left:0px;
+  padding-right:0px;
+  margin-left:auto;
+  margin-right:auto;
+}
 .sidebar-item {
   height: 50px;
   color: aliceblue;

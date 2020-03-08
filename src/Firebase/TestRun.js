@@ -3,6 +3,7 @@ import Test from "./Test";
 
 export default class TestRun {
     constructor(doc) {
+        this.testRunId = doc.id
         this.automationAgent = doc.get("AutomationAgent")
         this.targetBranchName = doc.get("TargetBranchName")
         this.targetBuildNumber = doc.get("TargetBuildNumber")
