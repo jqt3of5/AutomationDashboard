@@ -8,7 +8,6 @@ task build(type: NodeTask) {
 
     script = file('scripts/build.js')
     println("$buildDir")
-
 }
 task copy(type:Copy){
     dependsOn build

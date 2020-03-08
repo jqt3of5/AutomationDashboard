@@ -34,7 +34,6 @@ class Table extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-
                     {this.props.data.map((data, i) => {
                         return (
                                 <tr key={i} className={"body-row"} >

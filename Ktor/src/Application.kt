@@ -34,6 +34,32 @@ fun Application.module(testing: Boolean = false) {
             resources(".")
             default("resources/index.html")
         }
+        route("/api"){
+
+            route("/tests")
+            {
+                get {
+                    call.respondText { "tests" }
+                }
+                route("/{testId}"){
+                    get {
+                        call.respondText { call.parameters["testId"] ?: "" }
+                    }
+                }
+            }
+            route("/fixtures")
+            {
+                get{
+                    call.respondText { "tests" }
+                }
+                route("/{fixtureId"){
+                    get {
+                        call.respondText { "tests" }
+                    }
+                }
+            }
+
+        }
 
         authenticate("myBasicAuth") {
             get("/protected/route/basic") {

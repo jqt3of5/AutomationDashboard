@@ -2,6 +2,7 @@
 export class TestStep
 {
     constructor(stepDoc) {
+        this.testStepId = stepDoc.id
         this.action = stepDoc.get("Action")
         this.actionParams = stepDoc.get("ActionParams")
         this.beforeImageURL = stepDoc.get("BeforeImageURL")
