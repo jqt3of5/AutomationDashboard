@@ -9,6 +9,8 @@ import io.ktor.html.*
 import kotlinx.html.*
 import kotlinx.css.*
 import io.ktor.auth.*
+import io.ktor.http.ContentDisposition.Companion.File
+import io.ktor.http.content.default
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
 
@@ -26,50 +28,11 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
-        get("/") {
-            call.respondHtml {
-                 head {
-                       link(rel = "icon", href="/public/favicon.ico")
-                       link(rel = "manifest", href="/public/manifest.json")
-                     meta(charset="utf-8")
-                     meta (name="viewport", content = "width=device-width,initial-scale=1")
-                     meta (name="theme-color", content="#000000")
-                     link(rel="apple-touch-icon", href="/public/logo192.png")
-                     title {
-                         "Automation Dashboard"
-                     }
-                 }
-                 body {
-                     noScript {
-                         "You need to enable JavaScript to run this app."
-                     }
-                     script (type="text/javascript", src="/index.js"){}
 
-                     div {id = "root"}
-                 }
-            }
-        }
-
-        static("/public")
-        {
-            resources("React/public/")
-        }
         static("/")
         {
-            resources("React/src")
-        }
-        get("/styles.css") {
-            call.respondCss {
-                body {
-                    backgroundColor = Color.red
-                }
-                p {
-                    fontSize = 2.em
-                }
-                rule("p.myclass") {
-                    color = Color.blue
-                }
-            }
+            resources(".")
+            default("resources/index.html")
         }
 
         authenticate("myBasicAuth") {
