@@ -33,26 +33,56 @@ fun Application.module(testing: Boolean = false) {
             resources(".")
             default("resources/index.html")
         }
+
+        //routes used by React
+        route("/tests/{...}")
+        {
+            get{ call.respondFile(java.io.File("resources/index.html"))}
+        }
+        route("fixtures/{...}")
+        {
+            get{call.respondFile(java.io.File("resources/index.html"))}
+        }
+        route("testruns/{...}")
+        {
+            get{call.respondFile(java.io.File("resources/index.html"))}
+        }
+        route("fixtureruns/{...}")
+        {
+            get{call.respondFile(java.io.File("resources/index.html"))}
+        }
+        //==================================
+
+        //api routes
         route("/api"){
             route("/testruns"){
                 get{
-                    call.respondText { "TestRuns" }
+                    call.respondText { "[{}]" }
                 }
                 post {
-                    call.respondText { "TestrunAdded" }
+                    call.respondText { "{testrunid:3423lkjlkj234}" }
+                }
+                route("/{testrunid}")
+                {
+                    get {
+                        call.respondText {"{}"}
+                    }
                 }
             }
-            route("/tests/{namespace}/{fixture}/{testname}")
+            route("/tests")
             {
                 get {
-                    call.respondText { "{}" }
+                    call.respondText { "[{}]" }
                 }
                 post {
-                    call.respondText{"test added"}
+                    call.respondText{"{testid:sadfasdfasdf}"}
                 }
                 route("/{testId}"){
                     get {
                         call.respondText { call.parameters["testId"] ?: "" }
+                    }
+                    put {
+                        //update test
                     }
                 }
             }
@@ -61,7 +91,7 @@ fun Application.module(testing: Boolean = false) {
                 get{
                     call.respondText { "tests" }
                 }
-                route("/{fixtureId"){
+                route("/{fixtureId}"){
                     get {
                         call.respondText { "tests" }
                     }
