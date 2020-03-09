@@ -11,6 +11,7 @@ import kotlinx.css.*
 import io.ktor.auth.*
 import io.ktor.http.ContentDisposition.Companion.File
 import io.ktor.http.content.default
+import io.ktor.http.content.files
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
 
@@ -30,7 +31,7 @@ fun Application.module(testing: Boolean = false) {
 
         static("/")
         {
-            resources(".")
+            files("resources/")
             default("resources/index.html")
         }
 

@@ -1,0 +1,17 @@
+GET http://localhost:8080/api/tests
+content-type: application/json
+
+<> 2020-03-08T012738.200.txt
+
+###
+
+GET http://localhost:8080/tests
+content-type: application/json
+
+###
+
+GET http://localhost:8080/tests
+content-type: application/json
+
+###
+
