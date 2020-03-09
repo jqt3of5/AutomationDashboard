@@ -12,7 +12,7 @@ task build(type: NodeTask) {
 task copy(type:Copy){
     dependsOn build
     from "build/"
-    into "../resources"
+    into "../build/resources"
 }
 task run(type:NodeTask) {
     dependsOn copy
