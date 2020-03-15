@@ -29,36 +29,10 @@ fun Application.module(testing: Boolean = false) {
     }
     routing {
 
-        static("/")
-        {
-            files("resources/")
-            default("resources/index.html")
-        }
-
-        //routes used by React
-        route("/tests/{...}")
-        {
-            get{ call.respondFile(java.io.File("resources/index.html"))}
-        }
-        route("fixtures/{...}")
-        {
-            get{call.respondFile(java.io.File("resources/index.html"))}
-        }
-        route("testruns/{...}")
-        {
-            get{call.respondFile(java.io.File("resources/index.html"))}
-        }
-        route("fixtureruns/{...}")
-        {
-            get{call.respondFile(java.io.File("resources/index.html"))}
-        }
-        //==================================
-
-        //api routes
         route("/api"){
             route("/testruns"){
                 get{
-                    call.respondText { "[{}]" }
+                    call.respondText { "[{\"name\":\"adsf\", \"muted\":true, \"fixture\":{\"platform\":\"adf\", \"name\":\"adsf\"}}]" }
                 }
                 post {
                     call.respondText { "{testrunid:3423lkjlkj234}" }
@@ -73,7 +47,7 @@ fun Application.module(testing: Boolean = false) {
             route("/tests")
             {
                 get {
-                    call.respondText { "[{}]" }
+                    call.respondText { "[{\"name\":\"adsf\", \"muted\":true, \"fixture\":{\"platform\":\"adf\", \"name\":\"adsf\"}}]" }
                 }
                 post {
                     call.respondText{"{testid:sadfasdfasdf}"}
