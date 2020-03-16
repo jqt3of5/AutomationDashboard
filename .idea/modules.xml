@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AutomationDashboard.iml" filepath="$PROJECT_DIR$/.idea/AutomationDashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AutomationDashboard.iml" filepath="$PROJECT_DIR$/.idea/modules/AutomationDashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/React/AutomationDashboard.React.iml" filepath="$PROJECT_DIR$/.idea/modules/React/AutomationDashboard.React.iml" />
     </modules>
   </component>
 </project>

@@ -9,6 +9,7 @@ import io.ktor.html.*
 import kotlinx.html.*
 import kotlinx.css.*
 import io.ktor.auth.*
+import io.ktor.features.CORS
 import io.ktor.http.ContentDisposition.Companion.File
 import io.ktor.http.content.default
 import io.ktor.http.content.files
@@ -27,8 +28,11 @@ fun Application.module(testing: Boolean = false) {
                 if (it.name == "test" && it.password == "password") UserIdPrincipal(it.name) else null }
         }
     }
+    install(CORS){
+        anyHost()
+        method(HttpMethod.Get)
+    }
     routing {
-
         route("/api"){
             route("/testruns"){
                 get{

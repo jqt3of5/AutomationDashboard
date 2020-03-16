@@ -20,8 +20,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/AutomationDashboard.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/terminal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vagrant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ClojureProjectResolveSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-08T012738.200.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Build_React.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/React_Run__Node_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Kotr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.idea/inspectionProfiles/Project_Default_copy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/getHttpsConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/jest/cssTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/jest/fileTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/modules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/pnpTs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/config/webpackDevServer.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/scripts/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/scripts/start.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/scripts/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Firebase/Firestore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Firebase/Fixture.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Firebase/Test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Firebase/TestRun.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Firebase/TestStep.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/FixtureDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/FixtureList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Shared/Table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/Shared/Table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestRunDetails.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestRuns.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestRuns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/TestSteps.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/TestList.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +199,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/React/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -163,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Run Kotr">
+  <component name="RunManager" selected="Gradle.React Run [Node]">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="replType" value="NREPL" />
       <setting name="execution" value="LEININGEN" />
@@ -215,6 +300,7 @@
       <workItem from="1583803355468" duration="829000" />
       <workItem from="1584240315053" duration="12000" />
       <workItem from="1584240874548" duration="6902000" />
+      <workItem from="1584319451643" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="Moved react to be a subfolder of the server">
       <created>1583644112737</created>
@@ -297,10 +383,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="505" y="122" width="569" height="579" key="#Vim_Emulation/0.0.1536.824@0.0.1536.824" timestamp="1583694173384" />
-    <state x="319" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583804161127">
+    <state x="319" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584319584035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="319" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583804161127" />
+    <state x="319" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584319584035" />
     <state x="456" y="152" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583642929299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -313,10 +399,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1583803768238" />
-    <state x="568" y="102" key="FileChooserDialogImpl" timestamp="1583721478934">
+    <state x="568" y="102" key="FileChooserDialogImpl" timestamp="1584319783407">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="568" y="102" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583721478934" />
+    <state x="568" y="102" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584319783407" />
     <state width="1493" height="247" key="GridCell.Tab.0.bottom" timestamp="1584249933731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
