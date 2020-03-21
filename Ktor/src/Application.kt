@@ -1,5 +1,6 @@
 package com.example
 
+import com.google.gson.Gson
 import io.ktor.application.*
 import io.ktor.response.*
 import io.ktor.request.*
@@ -10,11 +11,16 @@ import kotlinx.html.*
 import kotlinx.css.*
 import io.ktor.auth.*
 import io.ktor.features.CORS
+import io.ktor.features.ContentNegotiation
 import io.ktor.http.ContentDisposition.Companion.File
 import io.ktor.http.content.default
 import io.ktor.http.content.files
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
+import io.ktor.serialization.serialization
+import org.json.simple.JSONObject
+
+val repo = TestRepo()
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -32,47 +38,88 @@ fun Application.module(testing: Boolean = false) {
         anyHost()
         method(HttpMethod.Get)
     }
+    install(ContentNegotiation)
+    {
+        serialization()
+    }
     routing {
         route("/api"){
-            route("/testruns"){
-                get{
-                    call.respondText { "[{\"name\":\"adsf\", \"muted\":true, \"fixture\":{\"platform\":\"adf\", \"name\":\"adsf\"}}]" }
+            route("/fixtureruns")
+            {
+                get {
+                    call.respond(repo.FixtureRuns)
                 }
-                post {
-                    call.respondText { "{testrunid:3423lkjlkj234}" }
-                }
+            }
+            route("/testrun"){
                 route("/{testrunid}")
                 {
                     get {
-                        call.respondText {"{}"}
+                        repo.TestRuns.find {
+                            it.testRunId == call.parameters["testrunid"]
+                        }?.let {
+                            call.respond(it)
+                        } ?: call.respondText(ContentType.Application.Json, HttpStatusCode.NotFound) {
+                            "{\"errorMessage\":\"Could not find testrun with id\"}"
+                        }
+                    }
+                    post {
+                        var testrun = call.receive<TestRun>()
+                        repo.TestRuns.add(testrun)
+                        call.respond(HttpStatusCode.OK, "")
+                    }
+                    route("/steps")
+                    {
+                        get {
+                            var steps = repo.TestSteps.filter { it.testRunId == call.parameters["testrunid"] }
+                            call.respond(steps)
+                        }
                     }
                 }
             }
-            route("/tests")
+            route("/teststep")
             {
-                get {
-                    call.respondText { "[{\"name\":\"adsf\", \"muted\":true, \"fixture\":{\"platform\":\"adf\", \"name\":\"adsf\"}}]" }
-                }
-                post {
-                    call.respondText{"{testid:sadfasdfasdf}"}
-                }
-                route("/{testId}"){
+                route("/{teststepid}")
+                {
                     get {
-                        call.respondText { call.parameters["testId"] ?: "" }
+                        repo.TestSteps.find {
+                            it.testStepId == call.parameters["teststepid"]
+                        }?.let {
+                            call.respond(it)
+                        } ?: call.respondText(ContentType.Application.Json, HttpStatusCode.NotFound) {
+                            "{\"errorMessage\":\"Could not find testrun with id\"}"
+                        }
                     }
-                    put {
-                        //update test
+                    post {
+                        var teststep = call.receive<TestStep>()
+                        repo.TestSteps.add(teststep)
+                        call.respond(HttpStatusCode.OK, "")
                     }
                 }
             }
-            route("/fixtures")
+            route("/fixturerun")
             {
-                get{
-                    call.respondText { "tests" }
-                }
-                route("/{fixtureId}"){
+                route("/{fixturerunid}")
+                {
                     get {
-                        call.respondText { "tests" }
+                       repo.FixtureRuns.find {
+                            it.fixtureRunId == call.parameters["fixturerunid"]
+                        }?.let {
+                            call.respond(it)
+                        } ?: call.respondText(ContentType.Application.Json, HttpStatusCode.NotFound) {
+                            "{\"errorMessage\":\"Could not find fixturerun with id\"}"
+                        }
+                    }
+                    post {
+                        var run = call.receive<FixtureRun>()
+                        repo.FixtureRuns.add(run)
+                        call.respond(HttpStatusCode.OK, "")
+                    }
+                    route("/testruns")
+                    {
+                        get {
+                           var testruns = repo.TestRuns.filter { it.fixtureRunId == call.parameters["fixturerunid"] }
+                            call.respond(testruns)
+                        }
                     }
                 }
             }

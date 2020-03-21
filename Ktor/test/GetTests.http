@@ -1,5 +1,28 @@
-GET http://localhost:8080/api/tests
+GET http://localhost:8080/api/fixtureruns
+content-type: application/json
+###
+GET http://localhost:8080/api/fixturerun/{}
+content-type: application/json
+###
+POST http://localhost:8080/api/fixturerun/{}
+content-type: application/json
+###
+POST http://localhost:8080/api/fixturerun/{}/testruns
+content-type: application/json
+###
+GET http://localhost:8080/api/testrun/{}
+content-type: application/json
+###
+POST http://localhost:8080/api/testrun/{}
+content-type: application/json
+###
+GET http://localhost:8080/api/testrun/{}/steps
+content-type: application/json
+###
+GET http://localhost:8080/api/teststep/{}
+content-type: application/json
+###
+POST http://localhost:8080/api/teststep/{}
 content-type: application/json
 
-###
 
