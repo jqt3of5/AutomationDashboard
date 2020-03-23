@@ -1,17 +1,375 @@
-GET http://localhost:8080/api/tests
-content-type: application/json
+GET http://localhost:4444/grid/api/hub
 
-<> 2020-03-08T012738.200.txt
-
-###
-
-GET http://localhost:8080/tests
-content-type: application/json
+<> 2020-03-22T045233.200.json
 
 ###
 
-GET http://localhost:8080/tests
+GET http://localhost:4444/wd/hub/
+
+<> 2020-03-22T045216.500.json
+
+###
+
+GET http://localhost:4723/wd/hub/
+
+<> 2020-03-22T045207.404.txt
+
+###
+
+GET http://localhost:4444/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T045043.200.json
+
+###
+
+DELETE http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T045040.404.json
+
+###
+
+DELETE http://localhost:4723/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T045032.404.json
+
+###
+
+GET http://localhost:4444/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T045021.200.json
+
+###
+
+GET http://localhost:4444/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T045012.200.json
+
+###
+
+GET http://localhost:4444/grid/api/testsession?session=12345
+
+<> 2020-03-22T044957.200.json
+
+###
+
+GET http://localhost:4444/grid/api/testsession/
+
+<> 2020-03-22T044942.500.html
+
+###
+
+GET http://localhost:4444/grid/api/proxy
 content-type: application/json
+
+{
+"id":"http://localhost:4723"
+}
+
+<> 2020-03-22T044823.200.json
+
+###
+
+GET http://localhost:4444/grid/api/proxy
+
+<> 2020-03-22T044743.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-22T044713.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-22T044711.200.json
+
+###
+
+GET localhost:4444/wd/http://localhost:4723/
+
+###
+
+GET http://localhost:4444/wd/node/
+
+<> 2020-03-22T044639.404.html
+
+###
+
+GET http://localhost:4444/wd/hub/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07/status
+
+<> 2020-03-22T044553.500.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-22T044526.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-22T044444.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T044137.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+
+<> 2020-03-22T044130.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T044115.200.json
+
+###
+
+DELETE http://localhost:4444/wd/hub/session/00a946b9-6e3d-464e-a139-4b68f48d7db6
+
+<> 2020-03-22T044053.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T044036.200.json
+
+###
+
+DELETE http://localhost:4444/wd/hub/session/c7f879f8-fcdd-472f-bdf9-2903564493aa
+
+<> 2020-03-22T044035.404.json
+
+###
+
+DELETE http://localhost:4723/wd/hub/session/c7f879f8-fcdd-472f-bdf9-2903564493aa
+
+<> 2020-03-22T044024.404.json
+
+###
+
+DELETE http://localhost:4723/wd/hub/session/c7f879f8-fcdd-472f-bdf9-2903564493aa
+
+<> 2020-03-22T043942.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T043926.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-22T043833.200.json
+
+###
+
+DELETE http://localhost:4723/wd/hub/session/id0d6161e1-3326-4872-8a1b-116d318caafa
+
+<> 2020-03-22T043815.404.json
+
+###
+
+GET http://localhost:4444/wd/hub/session/id0d6161e1-3326-4872-8a1b-116d318caafa
+
+<> 2020-03-22T043711.500.json
+
+###
+
+GET http://localhost:4444/session/id0d6161e1-3326-4872-8a1b-116d318caafa
+
+<> 2020-03-22T043703.404.html
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T043651.200.json
+
+###
+
+DELETE http://localhost:4723/wd/hub/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
+
+<> 2020-03-22T043528.404.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-22T043507.200.json
+
+###
+
+DELETE http://localhost:4444/wd/hub/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
+
+<> 2020-03-22T043359.404.json
+
+###
+
+DELETE http://localhost:4444/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-22T043258.200.json
+
+###
+
+GET http://localhost:4444/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
+
+<> 2020-03-22T043223.404.html
+
+###
+
+GET http://localhost:4444/sessions
+
+<> 2020-03-22T043010.404.html
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-22T042945.200.json
+
+###
+
+GET http://localhost:4444/status
+
+<> 2020-03-22T042937.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-22T042921.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T042908.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Program Files (x86)\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T042836.500.json
+
+###
+
+GET http://localhost:4444/status
+
+<> 2020-03-22T042836.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-22T042832.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\Program Files (x86)\notepad.exe"
+  }
+
+}
+
+<> 2020-03-22T042633.500.html
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows"
+  }
+
+}
+
+<> 2020-03-22T042259.400.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{}
+
+<> 2020-03-22T042144.500.html
 
 ###
 

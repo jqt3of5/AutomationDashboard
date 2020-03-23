@@ -19,94 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/AutomationDashboard.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/terminal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vagrant.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ClojureProjectResolveSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-03-08T012738.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Build_React.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/React_Run__Node_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Run_Kotr.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="Added the gradle configs.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.idea/inspectionProfiles/Project_Default_copy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/getHttpsConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/jest/cssTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/jest/fileTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/modules.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/pnpTs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/config/webpackDevServer.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/scripts/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/scripts/start.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/scripts/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Firebase/Firestore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Firebase/Fixture.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Firebase/Test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Firebase/TestRun.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Firebase/TestStep.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/FixtureDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/FixtureList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Shared/Table.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/Shared/Table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestRunDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestRuns.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestRuns.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/TestSteps.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/TestList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,43 +45,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ktor" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ktor" type="f1a62948:ProjectNode" />
-                <item name="react" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ktor" type="f1a62948:ProjectNode" />
-                <item name="react" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ktor" type="f1a62948:ProjectNode" />
-                <item name="react" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="node" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ktor" type="f1a62948:ProjectNode" />
-                <item name="react" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ktor" type="f1a62948:ProjectNode" />
-                <item name="react" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -196,7 +76,6 @@
     <property name="GoToNamespace.includeLibraries" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -207,7 +86,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -248,7 +127,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.React Run [Node]">
+  <component name="RunManager" selected="Kotlin.Start Server">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="replType" value="NREPL" />
       <setting name="execution" value="LEININGEN" />
@@ -272,10 +151,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.React Run [Node]" />
-      <item itemvalue="Gradle.Build React" />
+      <item itemvalue="Gradle.Start Node" />
       <item itemvalue="HTTP Request.All in GetTests" />
-      <item itemvalue="Kotlin.Run Kotr" />
+      <item itemvalue="Kotlin.Start Server" />
     </list>
     <recent_temporary>
       <list>
@@ -383,10 +261,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="505" y="122" width="569" height="579" key="#Vim_Emulation/0.0.1536.824@0.0.1536.824" timestamp="1583694173384" />
-    <state x="319" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584319584035">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="774" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584831103652">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="319" y="50" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584319584035" />
+    <state x="774" y="314" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584831103652" />
     <state x="456" y="152" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583642929299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -403,22 +282,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="568" y="102" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584319783407" />
-    <state width="1493" height="247" key="GridCell.Tab.0.bottom" timestamp="1584249933731">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom" timestamp="1584831161339">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584249933731" />
-    <state width="1493" height="247" key="GridCell.Tab.0.center" timestamp="1584249933731">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2517" height="400" key="GridCell.Tab.0.bottom/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584831161339" />
+    <state width="2517" height="400" key="GridCell.Tab.0.center" timestamp="1584831161338">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584249933731" />
-    <state width="1493" height="247" key="GridCell.Tab.0.left" timestamp="1584249933731">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2517" height="400" key="GridCell.Tab.0.center/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584831161338" />
+    <state width="2517" height="400" key="GridCell.Tab.0.left" timestamp="1584831161338">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584249933731" />
-    <state width="1493" height="247" key="GridCell.Tab.0.right" timestamp="1584249933731">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="2517" height="400" key="GridCell.Tab.0.left/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584831161338" />
+    <state width="2517" height="400" key="GridCell.Tab.0.right" timestamp="1584831161339">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1493" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584249933731" />
+    <state width="2517" height="400" key="GridCell.Tab.0.right/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584831161339" />
     <state x="349" y="155" key="IDE.errors.dialog" timestamp="1583695744288">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -435,10 +318,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="262" width="682" height="362" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1583687726466" />
-    <state x="254" y="10" width="1243" height="710" key="SettingsEditor" timestamp="1584246571317">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="423" y="17" width="1243" height="710" key="SettingsEditor" timestamp="1584830810830">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="254" y="10" width="1243" height="710" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584246571317" />
+    <state x="423" y="17" key="SettingsEditor/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584830810830" />
     <state x="657" y="327" key="VCS.EditChangelistDialog" timestamp="1583803499337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

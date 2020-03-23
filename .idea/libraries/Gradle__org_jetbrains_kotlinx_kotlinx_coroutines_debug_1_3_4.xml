@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.3.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-debug/1.3.4/5c8f8006068c9cef25963b57554c9e61b315441b/kotlinx-coroutines-debug-1.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-debug/1.3.4/8483f5a35bb98f1c0e64adfb802141ed7fe7bb8c/kotlinx-coroutines-debug-1.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,37 @@
+GET http://localhost:4444/wd/hub/status
+###
+
+GET http://localhost:4723/wd/hub/status
+###
+
+GET http://localhost:4444/grid/api/hub
+###
+
+GET http://localhost:4443/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+###
+
+GET http://localhost:4444/grid/api/proxy
+content-type:application/json
+
+{
+"id":"http://localhost:4723"
+}
+###
+
+DELETE http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+###
+DELETE http://localhost:4723/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type:application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+###
