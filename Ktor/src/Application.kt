@@ -33,7 +33,6 @@ fun Application.module()
             validate {
                 if (it.name == "test" && it.password == "password") UserIdPrincipal(it.name) else null }
         }
-
     }
     install(CORS){
         anyHost()

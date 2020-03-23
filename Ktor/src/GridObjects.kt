@@ -33,9 +33,3 @@ data class Node(
     val status : NodeStatus = NodeStatus.Unknown
 )
 
-@Serializable
-data class Session(
-    val hubName : String,
-    val nodeName : String,
-    val sessionId : String
-)

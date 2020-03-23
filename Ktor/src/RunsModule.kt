@@ -48,9 +48,8 @@ fun Application.runsModule(testing: Boolean = false) {
                             repo.FixtureRuns.find {
                                 it.fixtureRunId == call.parameters["fixturerunid"]
                             }?.let {
-                                var sessionId = call.receive<String>()
-                                //TODO: Use sessionId to get the node
-                                it.sessionId = sessionId
+                                val session = call.receive<Session>()
+                                repo.setSession(it.fixtureRunId, session)
                                 call.respond("")
                             } ?: call.respond(HttpStatusCode.NotFound, Error("Could nto find fixturerun with id"))
                         }

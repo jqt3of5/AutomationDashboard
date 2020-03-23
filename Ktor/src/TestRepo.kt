@@ -18,6 +18,14 @@ data class Build (
 )
 
 @Serializable
+data class Session(
+    val hubName : String,
+    val nodeName : String,
+    val sessionId : String,
+    val fixtureId : String
+)
+
+@Serializable
 data class FixtureRun(
     val fixtureRunId : String,
     val fixtureName : String,
@@ -26,8 +34,8 @@ data class FixtureRun(
     val automationHub : String,
     val buildAgent : String,
     val start : Long,
-    val automationNode : String? = null,
-    var sessionId : String? = null
+    val videoURL : String? = null,
+    var session : Session? = null
 )
 
 enum class TestType {
@@ -44,7 +52,6 @@ data class TestRun(
     val fixtureRunId : String,
     val testType : TestType,
     val testParams : String,
-    val videoURL : String? = null,
     val start : Long = -1,
     val testStatus : String? = null
 )
@@ -180,16 +187,23 @@ class TestRepo {
 //            "fle",
 //            23, 123, 123))
     }
+
     fun addTestFixtureRun(fixture: FixtureRun)
     {
         FixtureRuns.add(fixture)
+    }
+
+    fun setSession(fixtureRunId : String, session :Session)
+    {
+        FixtureRuns.find { it.fixtureRunId == fixtureRunId }?.let {
+            it.session = session
+        }
     }
 
     fun addTestRun(test : TestRun)
     {
          TestRuns.add(test)
     }
-
     fun addTestStep(step : TestStep)
     {
         TestSteps.add(step)

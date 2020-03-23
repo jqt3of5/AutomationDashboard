@@ -29,7 +29,7 @@ fun Application.gridModule()
         route("/api") {
             route("/hubs"){
                 get {
-                   call.respond(gridRepo.hubs)
+                   call.respond(gridRepo.getHubs())
                 }
             }
             route ("/hub") {
@@ -46,32 +46,6 @@ fun Application.gridModule()
                                 val nodes = gridRepo.getNodesForHub(it)
                                 call.respond(nodes)
                             } ?: call.respond(HttpStatusCode.BadRequest, Error("No Hub Name"))
-                        }
-                    }
-                    route ("/sessions") {
-                        get {
-                            call.parameters["hubName"]?.let {
-                                val sessions = gridRepo.getSessionsForHub(it)
-                                call.respond(sessions)
-                            } ?: call.respond(HttpStatusCode.BadRequest, Error("No Hub Name"))
-                        }
-                    }
-                }
-            }
-            route ("/node") {
-                post {
-                    val node = call.receive<Node>()
-                    val name = gridRepo.addNode(node)
-                    call.respond(ObjectId(ObjectType.Node, name))
-                }
-                route("/{nodeName")
-                {
-                    route ("/sessions"){
-                        get {
-                            call.parameters["nodeName"]?.let {
-                                val sessions = gridRepo.getSessionsForHub(it)
-                                call.respond(sessions)
-                            } ?: call.respond(HttpStatusCode.BadRequest, Error("No node Name"))
                         }
                     }
                 }
