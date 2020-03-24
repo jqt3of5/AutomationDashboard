@@ -30,35 +30,41 @@ fun Application.runsModule(testing: Boolean = false) {
             {
                 post {
                     var run = call.receive<FixtureRun>()
-                    repo.FixtureRuns.add(run)
+                    repo.addTestFixtureRun(run)
                     call.respond(HttpStatusCode.OK, ObjectId(ObjectType.Fixture, run.fixtureRunId))
                 }
                 route("/{fixturerunid}")
                 {
                     get {
-                        repo.FixtureRuns.find {
-                            it.fixtureRunId == call.parameters["fixturerunid"]
+                        call.parameters["fixturerunid"]?.let {
+                            repo.getTestFixtureRun(it)
                         }?.let {
                             call.respond(it)
-                        } ?: call.respond(HttpStatusCode.NotFound, Error("Could nto find fixturerun with id"))
+                        }?: call.respond(HttpStatusCode.NotFound, Error("Could not find fixturerun with id"))
                     }
                     route("/session")
                     {
                         post {
-                            repo.FixtureRuns.find {
-                                it.fixtureRunId == call.parameters["fixturerunid"]
+                            val session = call.receive<Session>()
+                            repo.addSession(session)
+                            call.respond("")
+                        }
+                        get {
+                            call.parameters["fixturerunid"]?.let {
+                                repo.getSessionForFixture(it)
                             }?.let {
-                                val session = call.receive<Session>()
-                                repo.setSession(it.fixtureRunId, session)
-                                call.respond("")
-                            } ?: call.respond(HttpStatusCode.NotFound, Error("Could nto find fixturerun with id"))
+                                call.respond(it)
+                            }?: call.respond(HttpStatusCode.NotFound, Error("Could not find fixturerun with id"))
                         }
                     }
                     route("/testruns")
                     {
                         get {
-                            var testruns = repo.TestRuns.filter { it.fixtureRunId == call.parameters["fixturerunid"] }
-                            call.respond(testruns)
+                            call.parameters["fixturerunid"]?.let {
+                               repo.getTestRunsForFixtureRun(it)
+                            }?.let {
+                                call.respond(it)
+                            } ?: call.respond(HttpStatusCode.BadRequest, Error("Could not find tests for fixture id"))
                         }
                     }
                 }
@@ -66,14 +72,14 @@ fun Application.runsModule(testing: Boolean = false) {
             route("/testrun") {
                 post {
                     var testrun = call.receive<TestRun>()
-                    repo.TestRuns.add(testrun)
+                    repo.addTestRun(testrun)
                     call.respond(HttpStatusCode.OK, ObjectId(ObjectType.Test, testrun.testRunId))
                 }
                 route("/{testrunid}")
                 {
                     get {
-                        repo.TestRuns.find {
-                            it.testRunId == call.parameters["testrunid"]
+                        call.parameters["testrunid"]?.let {
+                            repo.getTestRun(it)
                         }?.let {
                             call.respond(it)
                         } ?: call.respond(HttpStatusCode.NotFound, Error("Could not find test run with id"))
@@ -81,8 +87,11 @@ fun Application.runsModule(testing: Boolean = false) {
                     route("/steps")
                     {
                         get {
-                            var steps = repo.TestSteps.filter { it.testRunId == call.parameters["testrunid"] }
-                            call.respond(steps)
+                            call.parameters["testrunid"]?.let {
+                                repo.getTestStepsForTestRun(it)
+                            }?.let {
+                                call.respond(it)
+                            } ?: call.respond(HttpStatusCode.NotFound, Error("Could not find test run with id"))
                         }
                     }
                 }
@@ -91,21 +100,10 @@ fun Application.runsModule(testing: Boolean = false) {
             {
                 post {
                     var teststep = call.receive<TestStep>()
-                    repo.TestSteps.add(teststep)
+                    repo.addTestStep(teststep)
                     call.respond(HttpStatusCode.OK, ObjectId(ObjectType.TestStep, teststep.testStepId))
                 }
-                route("/{teststepid}")
-                {
-                    get {
-                        repo.TestSteps.find {
-                            it.testStepId == call.parameters["teststepid"]
-                        }?.let {
-                            call.respond(it)
-                        } ?: call.respond(HttpStatusCode.NotFound, Error("Could not find teststep with id"))
-                    }
-                }
             }
-
         }
     }
 }

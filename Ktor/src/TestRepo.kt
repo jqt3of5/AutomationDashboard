@@ -18,11 +18,11 @@ data class Build (
 )
 
 @Serializable
-data class Session(
-    val hubName : String,
-    val nodeName : String,
+data class Session (
+    val fixtureRunId : String,
     val sessionId : String,
-    val fixtureId : String
+    val hubName : String,
+    val nodeName : String
 )
 
 @Serializable
@@ -34,8 +34,7 @@ data class FixtureRun(
     val automationHub : String,
     val buildAgent : String,
     val start : Long,
-    val videoURL : String? = null,
-    var session : Session? = null
+    val videoURL : String? = null
 )
 
 enum class TestType {
@@ -80,132 +79,47 @@ data class TestStep(
 
 class TestRepo {
     val FixtureRuns : MutableList<FixtureRun> = mutableListOf()
-    val TestRuns : MutableList<TestRun> = mutableListOf()
-    val TestSteps : MutableList<TestStep> = mutableListOf()
+    private val TestRuns : MutableList<TestRun> = mutableListOf()
+    private val TestSteps : MutableList<TestStep> = mutableListOf()
+    private val sessions : MutableList<Session> = mutableListOf()
 
-    init {
-       // addTestFixtureRun(FixtureRun("fixtureRunId1", arrayOf("a","b"),arrayOf("c","d"),1234567,1234569, "Auto1"))
-        //addTestFixtureRun(FixtureRun("fixtureRunId2", arrayOf("a","b"),arrayOf("c","d"),1234567,1234569, "Auto1"))
-       // addTestRun(TestRun("testRunId1", "fixtureRunId1",1234,1239,"adf","adsf","Passed"))
-       // addTestRun(TestRun("testRunId2", "fixtureRunId1",1234,1239,"adf","adsf","Passed"))
-        //addTestRun(TestRun("testRunId3", "fixtureRunId2",1234,1239,"adf","adsf","Passed"))
-        //addTestRun(TestRun("testRunId4", "fixtureRunId2",1234,1239,"adf","adsf","Passed"))
-//        addTestStep(TestStep(
-//            "testStepId1", "testRunId1",
-//            "Click",
-//            "adsf",
-//            "adf",
-//            "id",
-//            "locator",
-//            12345,
-//            123456,
-//            "None",
-//            "adsfasd",
-//            "image",
-//            "Pageclass",
-//            "element",
-//            "fle",
-//            23, 123, 123))
-//        addTestStep(TestStep(
-//            "testStepId1", "testRunId2",
-//            "Click",
-//            "adsf",
-//            "adf",
-//            "id",
-//            "locator",
-//            12345,
-//            123456,
-//            "None",
-//            "adsfasd",
-//            "image",
-//            "Pageclass",
-//            "element",
-//            "fle",
-//            23, 123, 123))
-//        addTestStep(TestStep(
-//            "testStepId1", "testRunId3",
-//            "Click",
-//            "adsf",
-//            "adf",
-//            "id",
-//            "locator",
-//            12345,
-//            123456,
-//            "None",
-//            "adsfasd",
-//            "image",
-//            "Pageclass",
-//            "element",
-//            "fle",
-//            23, 123, 123))
-//        addTestStep(TestStep(
-//            "testStepId1", "testRunId4",
-//            "Click",
-//            "adsf",
-//            "adf",
-//            "id",
-//            "locator",
-//            12345,
-//            123456,
-//            "None",
-//            "adsfasd",
-//            "image",
-//            "Pageclass",
-//            "element",
-//            "fle",
-//            23, 123, 123))
-//        addTestStep(TestStep(
-//            "testStepId1", "testRunId4",
-//            "Click",
-//            "adsf",
-//            "adf",
-//            "id",
-//            "locator",
-//            12345,
-//            123456,
-//            "None",
-//            "adsfasd",
-//            "image",
-//            "Pageclass",
-//            "element",
-//            "fle",
-//            23, 123, 123))
-//        addTestStep(TestStep(
-//            "testStepId1", "testRunId4",
-//            "Click",
-//            "adsf",
-//            "adf",
-//            "id",
-//            "locator",
-//            12345,
-//            123456,
-//            "None",
-//            "adsfasd",
-//            "image",
-//            "Pageclass",
-//            "element",
-//            "fle",
-//            23, 123, 123))
-    }
 
     fun addTestFixtureRun(fixture: FixtureRun)
     {
         FixtureRuns.add(fixture)
     }
-
-    fun setSession(fixtureRunId : String, session :Session)
+    fun getTestFixtureRun(fixtureId : String) : FixtureRun?
     {
-        FixtureRuns.find { it.fixtureRunId == fixtureRunId }?.let {
-            it.session = session
+        return FixtureRuns.find {
+            it.fixtureRunId == fixtureId
         }
     }
-
+    fun addSession(session : Session)
+    {
+        sessions.add(session)
+    }
+    fun getSessionForFixture(fixtureRunId : String) : Session?
+    {
+       return sessions.find { it.fixtureRunId == fixtureRunId }
+    }
     fun addTestRun(test : TestRun)
     {
          TestRuns.add(test)
     }
+    fun getTestRunsForFixtureRun(fixtureRunId : String) : List<TestRun>
+    {
+        return TestRuns.filter { it.fixtureRunId == fixtureRunId }
+    }
+    fun getTestRun(testRunId : String) : TestRun?
+    {
+        return TestRuns.find { it.testRunId == testRunId }
+    }
     fun addTestStep(step : TestStep)
     {
         TestSteps.add(step)
+    }
+    fun getTestStepsForTestRun(testRunId : String) : List<TestStep>
+    {
+        return TestSteps.filter { it.testRunId == testRunId }
     }
 }
