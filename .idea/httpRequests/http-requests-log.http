@@ -1,3 +1,346 @@
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-26T074700.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-26T074619.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-26T073422.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+###
+
+GET http://localhost:8080/api/hubs
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-25T074742.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-25T072637.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-25T072326.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-25T072318.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-25T071739.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+<> 2020-03-25T071717.200.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-25T071648.200.json
+
+###
+
+DELETE http://localhost:4444/wd/hub/session/91111fcf-1c48-4c7c-9466-20d7c21b4e7c
+
+<> 2020-03-25T071343.404.json
+
+###
+
+GET http://localhost:4723/wd/hub/sessions
+
+<> 2020-03-25T071132.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/sessions
+
+<> 2020-03-25T070642.500.json
+
+###
+
+POST http://localhost:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-25T070637.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/sessions
+
+<> 2020-03-25T070609.500.json
+
+###
+
+GET http://localhost:4444/wd/hub/session
+
+<> 2020-03-25T070546.500.html
+
+###
+
+POST http://172.25.31.115:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-25T070108.500.json
+
+###
+
+POST http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/elements
+
+{"using":"id","value":"42.4326172.3.-2147483647.4326172.-5.1"}
+
+<> 2020-03-24T090153.500.json
+
+###
+
+POST http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/elements
+
+{"using":"id","value":"DownButton"}
+
+<> 2020-03-24T090131.500.json
+
+###
+
+POST http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/elements
+
+{"using":"id","value":"DownButton"}
+
+<> 2020-03-24T090111.500.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/elements
+
+{"using":"id","value":"DownButton"}
+
+<> 2020-03-24T090100.405.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/element/DownButton/screenshot
+
+<> 2020-03-24T085647.404.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/element/42.4326172.3.-2147483647.4326172.-5.1/screenshot
+
+<> 2020-03-24T085454.404.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/element/42.4326172.3.-2147483647.4326172.-5.1/screenshot
+
+<> 2020-03-24T085329.404.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/element/42.4326172.3.-2147483647.4326172.-5.1/
+
+<> 2020-03-24T085257.404.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/window/0x003A07EE/size
+
+<> 2020-03-24T084751.200.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/window/0x003A07EE
+
+<> 2020-03-24T084731.404.json
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/window_handle
+
+<> 2020-03-24T084510.200.json
+
+###
+
+GET http://192.168.1.106:4444/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/window_handle
+
+<> 2020-03-24T084444.404.html
+
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/source
+
+<> 2020-03-24T074842.200.json
+
+###
+
+POST http://localhost:4723/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+<> 2020-03-24T074712.200.json
+
+###
+
+GET http://localhost:4723/wd/hub/status
+
+###
+
+GET http://192.168.1.106:4444/wd/hub/status
+
+<> 2020-03-24T073931.200.json
+
+###
+
+DELETE http://192.168.1.106:4444/wd/hub/session/9f1b3fcd-d5af-43c9-a15e-38e4cd11ae65
+
+<> 2020-03-24T073533.500.json
+
+###
+
+DELETE http://localhost:4444/wd/hub/session/9f1b3fcd-d5af-43c9-a15e-38e4cd11ae65
+
+###
+
+GET http://192.168.1.106:4444/grid/api/proxy
+content-type: application/json
+
+{
+"id":"http://localhost:4723"
+}
+
+<> 2020-03-24T073441.200.json
+
+###
+
+POST http://192.168.1.106:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+###
+
+GET http://192.168.1.106:4444/grid/api/hub
+
+<> 2020-03-24T072612.200.json
+
+###
+
+GET http://192.168.1.106:4444/wd/hub/status
+
+<> 2020-03-24T072554.200.json
+
+###
+
+GET http://192.168.1.106:4723/wd/hub/status
+
+<> 2020-03-24T072546.200.json
+
+###
+
+GET http://192.168.1.106:4444/grid/api/proxy
+content-type: application/json
+
+{
+"id":"http://localhost:4723"
+}
+
+<> 2020-03-24T072531.200.json
+
+###
+
+GET http://localhost:4444/grid/api/proxy
+content-type: application/json
+
+{
+"id":"http://localhost:4723"
+}
+
+###
+
+GET http://192.168.1.106:4444/grid/api/hub
+
+<> 2020-03-24T072308.200.json
+
+###
+
+GET http://localhost:4444/grid/api/hub
+
+###
+
+POST http://192.168.1.106:4444/wd/hub/session
+content-type: application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+
+###
+
 GET http://localhost:4444/grid/api/hub
 
 <> 2020-03-22T045233.200.json
@@ -13,363 +356,6 @@ GET http://localhost:4444/wd/hub/
 GET http://localhost:4723/wd/hub/
 
 <> 2020-03-22T045207.404.txt
-
-###
-
-GET http://localhost:4444/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T045043.200.json
-
-###
-
-DELETE http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T045040.404.json
-
-###
-
-DELETE http://localhost:4723/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T045032.404.json
-
-###
-
-GET http://localhost:4444/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T045021.200.json
-
-###
-
-GET http://localhost:4444/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T045012.200.json
-
-###
-
-GET http://localhost:4444/grid/api/testsession?session=12345
-
-<> 2020-03-22T044957.200.json
-
-###
-
-GET http://localhost:4444/grid/api/testsession/
-
-<> 2020-03-22T044942.500.html
-
-###
-
-GET http://localhost:4444/grid/api/proxy
-content-type: application/json
-
-{
-"id":"http://localhost:4723"
-}
-
-<> 2020-03-22T044823.200.json
-
-###
-
-GET http://localhost:4444/grid/api/proxy
-
-<> 2020-03-22T044743.200.json
-
-###
-
-GET http://localhost:4723/wd/hub/status
-
-<> 2020-03-22T044713.200.json
-
-###
-
-GET http://localhost:4444/wd/hub/status
-
-<> 2020-03-22T044711.200.json
-
-###
-
-GET localhost:4444/wd/http://localhost:4723/
-
-###
-
-GET http://localhost:4444/wd/node/
-
-<> 2020-03-22T044639.404.html
-
-###
-
-GET http://localhost:4444/wd/hub/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07/status
-
-<> 2020-03-22T044553.500.json
-
-###
-
-GET http://localhost:4723/wd/hub/status
-
-<> 2020-03-22T044526.200.json
-
-###
-
-GET http://localhost:4444/wd/hub/status
-
-<> 2020-03-22T044444.200.json
-
-###
-
-GET http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T044137.200.json
-
-###
-
-GET http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
-
-<> 2020-03-22T044130.200.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T044115.200.json
-
-###
-
-DELETE http://localhost:4444/wd/hub/session/00a946b9-6e3d-464e-a139-4b68f48d7db6
-
-<> 2020-03-22T044053.200.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T044036.200.json
-
-###
-
-DELETE http://localhost:4444/wd/hub/session/c7f879f8-fcdd-472f-bdf9-2903564493aa
-
-<> 2020-03-22T044035.404.json
-
-###
-
-DELETE http://localhost:4723/wd/hub/session/c7f879f8-fcdd-472f-bdf9-2903564493aa
-
-<> 2020-03-22T044024.404.json
-
-###
-
-DELETE http://localhost:4723/wd/hub/session/c7f879f8-fcdd-472f-bdf9-2903564493aa
-
-<> 2020-03-22T043942.200.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T043926.200.json
-
-###
-
-GET http://localhost:4444/wd/hub/status
-
-<> 2020-03-22T043833.200.json
-
-###
-
-DELETE http://localhost:4723/wd/hub/session/id0d6161e1-3326-4872-8a1b-116d318caafa
-
-<> 2020-03-22T043815.404.json
-
-###
-
-GET http://localhost:4444/wd/hub/session/id0d6161e1-3326-4872-8a1b-116d318caafa
-
-<> 2020-03-22T043711.500.json
-
-###
-
-GET http://localhost:4444/session/id0d6161e1-3326-4872-8a1b-116d318caafa
-
-<> 2020-03-22T043703.404.html
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T043651.200.json
-
-###
-
-DELETE http://localhost:4723/wd/hub/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
-
-<> 2020-03-22T043528.404.json
-
-###
-
-GET http://localhost:4444/wd/hub/status
-
-<> 2020-03-22T043507.200.json
-
-###
-
-DELETE http://localhost:4444/wd/hub/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
-
-<> 2020-03-22T043359.404.json
-
-###
-
-DELETE http://localhost:4444/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
-
-###
-
-GET http://localhost:4723/wd/hub/status
-
-<> 2020-03-22T043258.200.json
-
-###
-
-GET http://localhost:4444/session/e970e78b-75a4-4858-9dd4-8447d51e1ffa
-
-<> 2020-03-22T043223.404.html
-
-###
-
-GET http://localhost:4444/sessions
-
-<> 2020-03-22T043010.404.html
-
-###
-
-GET http://localhost:4723/wd/hub/status
-
-<> 2020-03-22T042945.200.json
-
-###
-
-GET http://localhost:4444/status
-
-<> 2020-03-22T042937.200.json
-
-###
-
-GET http://localhost:4723/wd/hub/status
-
-<> 2020-03-22T042921.200.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T042908.200.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Program Files (x86)\\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T042836.500.json
-
-###
-
-GET http://localhost:4444/status
-
-<> 2020-03-22T042836.200.json
-
-###
-
-GET http://localhost:4723/wd/hub/status
-
-<> 2020-03-22T042832.200.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\Program Files (x86)\notepad.exe"
-  }
-
-}
-
-<> 2020-03-22T042633.500.html
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows"
-  }
-
-}
-
-<> 2020-03-22T042259.400.json
-
-###
-
-POST http://localhost:4444/wd/hub/session
-content-type: application/json
-
-{}
-
-<> 2020-03-22T042144.500.html
 
 ###
 

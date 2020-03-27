@@ -62,6 +62,7 @@ data class TestStep(
     val action: String,
     val actionParams : String,
     val beforeImageURL : String,
+    val beforePageSource : String,
     val elementFindBy : String,
     val elementLocator : String,
     val actionStart : Long,

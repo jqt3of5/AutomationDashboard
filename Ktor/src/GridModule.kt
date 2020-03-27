@@ -38,16 +38,18 @@ fun Application.gridModule()
                     val name = gridRepo.addHub(hub)
                     call.respond(ObjectId(ObjectType.Hub, name))
                 }
-                route("/{hubName}")
-                {
-                    route("/nodes") {
-                        get {
-                            call.parameters["hubName"]?.let {
-                                val nodes = gridRepo.getNodesForHub(it)
-                                call.respond(nodes)
-                            } ?: call.respond(HttpStatusCode.BadRequest, Error("No Hub Name"))
-                        }
-                    }
+            }
+            route("/nodes") {
+                get {
+                    val nodes = gridRepo.getNodes()
+                    call.respond(nodes)
+                }
+            }
+            route("/node") {
+                post {
+                    val node = call.receive<Node>()
+                    val name = gridRepo.addNode(node)
+                    call.respond(ObjectId(ObjectType.Node, name))
                 }
             }
         }

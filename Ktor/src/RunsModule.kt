@@ -44,11 +44,6 @@ fun Application.runsModule(testing: Boolean = false) {
                     }
                     route("/session")
                     {
-                        post {
-                            val session = call.receive<Session>()
-                            repo.addSession(session)
-                            call.respond("")
-                        }
                         get {
                             call.parameters["fixturerunid"]?.let {
                                 repo.getSessionForFixture(it)
@@ -102,6 +97,14 @@ fun Application.runsModule(testing: Boolean = false) {
                     var teststep = call.receive<TestStep>()
                     repo.addTestStep(teststep)
                     call.respond(HttpStatusCode.OK, ObjectId(ObjectType.TestStep, teststep.testStepId))
+                }
+            }
+            route("/session")
+            {
+                post {
+                    val session = call.receive<Session>()
+                    repo.addSession(session)
+                    call.respond("")
                 }
             }
         }

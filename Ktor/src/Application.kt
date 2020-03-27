@@ -10,6 +10,8 @@ import io.ktor.html.*
 import kotlinx.html.*
 import kotlinx.css.*
 import io.ktor.auth.*
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.apache.Apache
 import io.ktor.features.CORS
 import io.ktor.features.ContentNegotiation
 import io.ktor.http.ContentDisposition.Companion.File
@@ -19,6 +21,7 @@ import io.ktor.http.content.resources
 import io.ktor.http.content.static
 import io.ktor.serialization.json
 import io.ktor.serialization.serialization
+import kotlinx.serialization.json.Json
 import org.json.simple.JSONObject
 
 
@@ -40,7 +43,14 @@ fun Application.module()
     }
     install(ContentNegotiation)
     {
-        json()
+        json(Json(context = gridModule))
+    }
+
+}
+
+val httpClient = HttpClient(Apache){
+    engine {
+
     }
 }
 

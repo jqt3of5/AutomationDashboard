@@ -1,28 +1,45 @@
+
+
 GET http://localhost:4444/wd/hub/status
 ###
-
 GET http://localhost:4723/wd/hub/status
 ###
 
-GET http://localhost:4444/grid/api/hub
+GET http://192.168.1.106:4444/grid/api/hub
 ###
 
 GET http://localhost:4443/grid/api/testsession?session=d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
 ###
 
-GET http://localhost:4444/grid/api/proxy
+GET http://192.168.1.106:4444/grid/api/proxy
 content-type:application/json
 
 {
 "id":"http://localhost:4723"
 }
 ###
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/source
 
-DELETE http://localhost:4444/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
+###
+DELETE http://localhost:4444/wd/hub/session/91111fcf-1c48-4c7c-9466-20d7c21b4e7c
 ###
 DELETE http://localhost:4723/wd/hub/session/d7f4b49d-d8d4-4ca5-be7c-5b3e62a10a07
 ###
 
+POST http://192.168.1.106:4444/wd/hub/session
+content-type:application/json
+
+{
+  "desiredCapabilities":{
+    "platformName": "Windows",
+    "app": "C:\\Windows\\System32\\notepad.exe"
+  }
+
+}
+###
+GET http://localhost:4723/wd/hub/sessions
+
+###
 POST http://localhost:4444/wd/hub/session
 content-type:application/json
 
@@ -33,5 +50,13 @@ content-type:application/json
   }
 
 }
+###
+
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/window_handle
+###
+POST http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/elements
+
+{"using":"id","value":"42.4326172.3.-2147483647.4326172.-5.1"}
 
 ###
+GET http://localhost:4723/session/7DA374DA-9145-4D39-B086-F55DF6B5B979/element/DownButton/screenshot
