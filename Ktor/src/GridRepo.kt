@@ -1,14 +1,11 @@
 package com.example
 
-import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import kotlin.Exception
 
 class GridRepo {
 
-    private val hubs = mutableListOf(Hub("Venom","localhost", 4444,
-        HubStatus.OnlineHub(
-            HubStatus.Status(1, HubStatus.Value(true, ""),HubStatus.Os("","","") ))))
+    private val hubs = mutableListOf(Hub("Venom","localhost", 4444))
     private val nodes = mutableListOf(Node("agent1", "Venom", "localhost", 4723))
 
     fun addHub(hub : Hub) : String{
@@ -18,15 +15,13 @@ class GridRepo {
 
     suspend fun getHubs() : List<Hub> {
 
-        val client = HttpClient()
-
         hubs.forEach {
             try {
-                var status = client.get<HubStatus>("${it.hostname}:${it.port}/wd/hub/status")
-                it.status = status
+                var status = httpClient.get<HubState.Online.SeleniumStatus>("http://${it.hostname}:${it.port}/wd/hub/status")
+                it.status = HubState.Online(status)
             } catch (e : Exception)
             {
-               // it.status = HubStatus.Offline
+                it.status = HubState.Offline
             }
         }
         return hubs
@@ -38,17 +33,16 @@ class GridRepo {
     }
     suspend fun getNodes() : List<Node>
     {
-        val client = HttpClient()
         nodes.forEach {
             try {
-                val status = client.get<NodeStatus>("${it.hostname}:${it.port}/wd/hub/status")
-                it.status = status
+                val status = httpClient.get<NodeState.AppiumStatus>("http://${it.hostname}:${it.port}/wd/hub/status")
+                //TODO: Is it actually connected to Hub?
+                it.status = NodeState.Connected(status)
             } catch (e : Exception)
             {
-                it.status = NodeStatus.Offline
+                it.status = NodeState.Offline
             }
         }
-
        return nodes
     }
 }

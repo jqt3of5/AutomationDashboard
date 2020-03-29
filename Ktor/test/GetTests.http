@@ -71,4 +71,6 @@ content-type: application/json
 
 GET http://localhost:8080/api/hubs
 ###
+GET http://localhost:4444/wd/hub/status
 
+###

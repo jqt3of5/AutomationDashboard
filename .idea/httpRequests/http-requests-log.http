@@ -1,3 +1,83 @@
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-28T123926.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T123916.200.json
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-28T123909.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T123133.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+###
+
+GET http://localhost:4444/wd/hub/status
+
+<> 2020-03-28T110034.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T105317.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T103806.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T103517.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T103255.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T103205.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T102853.200.json
+
+###
+
+GET http://localhost:8080/api/hubs
+
+<> 2020-03-28T102802.200.json
+
+###
+
 GET http://localhost:8080/api/hubs
 
 <> 2020-03-26T074700.200.json
@@ -249,113 +329,6 @@ GET http://192.168.1.106:4444/wd/hub/status
 DELETE http://192.168.1.106:4444/wd/hub/session/9f1b3fcd-d5af-43c9-a15e-38e4cd11ae65
 
 <> 2020-03-24T073533.500.json
-
-###
-
-DELETE http://localhost:4444/wd/hub/session/9f1b3fcd-d5af-43c9-a15e-38e4cd11ae65
-
-###
-
-GET http://192.168.1.106:4444/grid/api/proxy
-content-type: application/json
-
-{
-"id":"http://localhost:4723"
-}
-
-<> 2020-03-24T073441.200.json
-
-###
-
-POST http://192.168.1.106:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-###
-
-GET http://192.168.1.106:4444/grid/api/hub
-
-<> 2020-03-24T072612.200.json
-
-###
-
-GET http://192.168.1.106:4444/wd/hub/status
-
-<> 2020-03-24T072554.200.json
-
-###
-
-GET http://192.168.1.106:4723/wd/hub/status
-
-<> 2020-03-24T072546.200.json
-
-###
-
-GET http://192.168.1.106:4444/grid/api/proxy
-content-type: application/json
-
-{
-"id":"http://localhost:4723"
-}
-
-<> 2020-03-24T072531.200.json
-
-###
-
-GET http://localhost:4444/grid/api/proxy
-content-type: application/json
-
-{
-"id":"http://localhost:4723"
-}
-
-###
-
-GET http://192.168.1.106:4444/grid/api/hub
-
-<> 2020-03-24T072308.200.json
-
-###
-
-GET http://localhost:4444/grid/api/hub
-
-###
-
-POST http://192.168.1.106:4444/wd/hub/session
-content-type: application/json
-
-{
-  "desiredCapabilities":{
-    "platformName": "Windows",
-    "app": "C:\\Windows\\System32\\notepad.exe"
-  }
-
-}
-
-###
-
-GET http://localhost:4444/grid/api/hub
-
-<> 2020-03-22T045233.200.json
-
-###
-
-GET http://localhost:4444/wd/hub/
-
-<> 2020-03-22T045216.500.json
-
-###
-
-GET http://localhost:4723/wd/hub/
-
-<> 2020-03-22T045207.404.txt
 
 ###
 

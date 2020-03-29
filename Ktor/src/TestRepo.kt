@@ -2,7 +2,6 @@ package com.example
 
 import kotlinx.serialization.*
 
-
 @Serializable
 data class Branch(
     val name : String,

@@ -1,28 +1,17 @@
 package com.example
 
-import com.google.gson.Gson
 import io.ktor.application.*
-import io.ktor.response.*
-import io.ktor.request.*
-import io.ktor.routing.*
 import io.ktor.http.*
-import io.ktor.html.*
-import kotlinx.html.*
-import kotlinx.css.*
 import io.ktor.auth.*
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.apache.Apache
+import io.ktor.client.features.json.JsonFeature
+import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.features.CORS
 import io.ktor.features.ContentNegotiation
-import io.ktor.http.ContentDisposition.Companion.File
-import io.ktor.http.content.default
-import io.ktor.http.content.files
-import io.ktor.http.content.resources
-import io.ktor.http.content.static
 import io.ktor.serialization.json
-import io.ktor.serialization.serialization
 import kotlinx.serialization.json.Json
-import org.json.simple.JSONObject
+import kotlinx.serialization.json.JsonConfiguration
 
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
@@ -49,9 +38,10 @@ fun Application.module()
 }
 
 val httpClient = HttpClient(Apache){
-    engine {
-
-    }
+   install(JsonFeature)
+   {
+        serializer = KotlinxSerializer(Json(JsonConfiguration(ignoreUnknownKeys = true)))
+   }
 }
 
 //
