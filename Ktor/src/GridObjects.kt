@@ -1,5 +1,7 @@
 package com.example
 
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.PolymorphicSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.modules.SerializersModule
 
@@ -8,49 +10,62 @@ val gridModule = SerializersModule {
         Service.Hub::class with Service.Hub.serializer()
         Service.Node::class with Service.Node.serializer()
         Service.ScreenRecorder::class with Service.ScreenRecorder.serializer()
+        Service.WinAppDriver::class with Service.WinAppDriver.serializer()
     }
-    polymorphic(NodeState::class) {
-        NodeState.Offline::class with NodeState.Offline.serializer()
-        NodeState.Unknown::class with NodeState.Unknown.serializer()
-        NodeState.Connected::class with NodeState.Connected.serializer()
-        NodeState.Disconnected::class with NodeState.Disconnected.serializer()
+    polymorphic(ServiceState::class) {
+        ServiceState.Offline::class with ServiceState.Offline.serializer()
+        ServiceState.Unknown::class with ServiceState.Unknown.serializer()
+        ServiceState.Online::class with ServiceState.Online.serializer(PolymorphicSerializer(Status::class))
     }
 }
 
-@Serializable
-open class ServiceStatus
-{
+class Host(
+    val name : String,
+    val hostname : String,
+    val services : MutableList<Service>
+)
 
-}
-
-@Serializable
-sealed class ServiceState<out T : ServiceStatus> {
+sealed class ServiceState<out T : Status>{
+    @Serializable
     object Unknown : ServiceState<Nothing>()
+    @Serializable
     object Offline : ServiceState<Nothing>()
+    @Serializable
+    class Online<out T : Status>(val status : T) : ServiceState<T>()
+}
 
-    class Online<T:ServiceStatus>(val status : T) : ServiceState<T>()
+sealed class Service {
+    @Serializable
+    class Hub(val port : Int = 4444) : Service()
+    @Serializable
+    class Node(val hubName: String, val port : Int = 4723) : Service()
+    @Serializable
+    class WinAppDriver(val port : Int = 4724) : Service()
+    @Serializable
+    class ScreenRecorder(val port : Int = 8080) : Service()
 }
+
 @Serializable
-sealed class Service<T>(
-    val port : Int,
-    var state : ServiceState<*> = ServiceState.Unknown
-){
-    class Hub(port : Int, state : ServiceState) : Service<SeleniumStatus>(port, state)
-    class Node(port : Int, state : ServiceState, val hubName: String) : Service<AppiumStatus>(port, state)
-    class ScreenRecorder(port : Int, state : ServiceState) : Service<Nothing>(port, state)
-}
+open class Status
+
+data class ScreenRecorderStatus(
+    val isRecording : Boolean,
+    val recordingId : String?
+) : Status()
 
 @Serializable
 data class AppiumStatus(
     val status :Int,
-    val sessionId : String
-)
+    val sessionId : String,
+    //TODO: Determine if this will actually work, since it isnt returned by the appium node.
+    var connected : Boolean = false
+) : Status()
 
 @Serializable
 data class SeleniumStatus(
     val status :Int,
     val value : Value
-){
+) : Status() {
     @Serializable
     data class Value (
         val ready : Boolean,

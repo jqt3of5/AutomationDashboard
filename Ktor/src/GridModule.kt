@@ -13,10 +13,9 @@ import io.ktor.routing.post
 import io.ktor.routing.route
 import io.ktor.routing.routing
 
-val gridRepo = GridRepo()
 
 @Suppress("unused") // Referenced in application.conf
-fun Application.gridModule()
+fun Application.gridModule(gridRepo : GridRepo)
 {
     routing {
 

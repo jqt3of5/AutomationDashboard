@@ -1,48 +1,76 @@
 package com.example
 
+import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import kotlin.Exception
 
-class GridRepo {
+class GridRepo(
+    val httpClient : HttpClient
+) {
 
-    private val hubs = mutableListOf(Hub("Venom","localhost", 4444))
-    private val nodes = mutableListOf(Node("agent1", "Venom", "localhost", 4723))
+    private val hosts = mutableListOf(
+        Host("Venom", "localhost", mutableListOf(Service.Hub())),
+        Host("Agent1", "localhost", mutableListOf(Service.Node("Venom"), Service.ScreenRecorder()))
+    )
 
-    fun addHub(hub : Hub) : String{
-        hubs.add(hub)
-        return hub.name
-    }
-
-    suspend fun getHubs() : List<Hub> {
-
-        hubs.forEach {
-            try {
-                var status = httpClient.get<HubState.Online.SeleniumStatus>("http://${it.hostname}:${it.port}/wd/hub/status")
-                it.status = HubState.Online(status)
-            } catch (e : Exception)
-            {
-                it.status = HubState.Offline
-            }
-        }
-        return hubs
-    }
-
-    fun addNode(node : Node) : String {
-        nodes.add(node)
-        return node.name
-    }
-    suspend fun getNodes() : List<Node>
+    fun addHost(host : Host)
     {
-        nodes.forEach {
-            try {
-                val status = httpClient.get<NodeState.AppiumStatus>("http://${it.hostname}:${it.port}/wd/hub/status")
-                //TODO: Is it actually connected to Hub?
-                it.status = NodeState.Connected(status)
-            } catch (e : Exception)
-            {
-                it.status = NodeState.Offline
-            }
+        hosts.add(host)
+    }
+
+    fun addServiceToHost(name : String, service : Service)
+    {
+        hosts.find { it.name == name }?.services?.apply {
+            add(service)
         }
-       return nodes
+    }
+
+    fun getHosts() = hosts
+
+    suspend fun getStateForService(host : Host, service : Service) : ServiceState<*>
+    {
+        return when(service)
+        {
+            is Service.Hub -> getHubState(host, service)
+            is Service.Node -> getNodeState(host, service)
+            is Service.ScreenRecorder -> getScreenRecorderState(host, service)
+            is Service.WinAppDriver -> ServiceState.Unknown
+            else -> ServiceState.Unknown
+        }
+    }
+
+    suspend fun getHubState(host : Host, hub : Service.Hub) : ServiceState<SeleniumStatus>
+    {
+        try {
+            var status = httpClient.get<SeleniumStatus>("http://${host.hostname}:${hub.port}/wd/hub/status")
+            return ServiceState.Online(status)
+        } catch (e : Exception)
+        {
+            return ServiceState.Offline
+        }
+    }
+
+    suspend fun getNodeState(host : Host, node : Service.Node) : ServiceState<AppiumStatus>
+    {
+        try {
+            val status = httpClient.get<AppiumStatus>("http://${host.hostname}:${node.port}/wd/hub/status")
+            //TODO: Is it actually connected to Hub?
+            status.connected = true
+            return ServiceState.Online(status)
+        } catch (e : Exception)
+        {
+            return ServiceState.Offline
+        }
+    }
+
+    suspend fun getScreenRecorderState(host : Host, screenrecorder : Service.ScreenRecorder) : ServiceState<ScreenRecorderStatus>
+    {
+        try {
+            val status = httpClient.get<ScreenRecorderStatus>("http://${host.hostname}:${screenrecorder.port}/status")
+            return ServiceState.Online(status)
+        } catch (e : Exception)
+        {
+            return ServiceState.Offline
+        }
     }
 }
