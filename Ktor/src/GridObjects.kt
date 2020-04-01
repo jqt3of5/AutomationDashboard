@@ -1,6 +1,5 @@
 package com.example
 
-import kotlinx.serialization.KSerializer
 import kotlinx.serialization.PolymorphicSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.modules.SerializersModule
@@ -20,7 +19,7 @@ val gridModule = SerializersModule {
 }
 
 class Host(
-    val name : String,
+    val id : String,
     val hostname : String,
     val services : MutableList<Service>
 )
@@ -47,6 +46,10 @@ sealed class Service {
 
 @Serializable
 open class Status
+
+data class WinAppDriverStats(
+    val something: String
+) : Status()
 
 data class ScreenRecorderStatus(
     val isRecording : Boolean,

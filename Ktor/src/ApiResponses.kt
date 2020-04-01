@@ -8,6 +8,7 @@ enum class ObjectType {
     TestStep,
     Hub,
     Node,
+    Session
 }
 @Serializable
 data class ObjectId(val objectType : ObjectType, val id : String)

@@ -1,8 +1,9 @@
 package com.example
 
+import io.ktor.application.call
 import io.ktor.client.HttpClient
 import io.ktor.client.request.get
-import kotlin.Exception
+import io.ktor.response.respond
 
 class GridRepo(
     val httpClient : HttpClient
@@ -18,33 +19,44 @@ class GridRepo(
         hosts.add(host)
     }
 
-    fun addServiceToHost(name : String, service : Service)
+    fun addServiceToHost(hostname : String, service : Service)
     {
-        hosts.find { it.name == name }?.services?.apply {
+        hosts.find { it.hostname == hostname }?.services?.apply {
             add(service)
         }
     }
 
     fun getHosts() = hosts
 
-    suspend fun getStateForService(host : Host, service : Service) : ServiceState<*>
+    suspend fun getCurrentSessionIdForService(service : Service) : String?
     {
-        return when(service)
-        {
-            is Service.Hub -> getHubState(host, service)
-            is Service.Node -> getNodeState(host, service)
-            is Service.ScreenRecorder -> getScreenRecorderState(host, service)
-            is Service.WinAppDriver -> ServiceState.Unknown
-            else -> ServiceState.Unknown
-        }
+
     }
 
+    suspend fun  getServiceState(host: Host, service : Service) : ServiceState<Status>
+    {
+        when(service)
+        {
+            is Service.Hub -> {
+               return getHubState(host, service)
+            }
+            is Service.Node -> {
+                return getNodeState(host, service)
+            }
+            is Service.ScreenRecorder -> {
+                return getScreenRecorderState(host, service)
+            }
+            is Service.WinAppDriver -> {
+                return getWinAppDriverState(host, service)
+            }
+        }
+    }
     suspend fun getHubState(host : Host, hub : Service.Hub) : ServiceState<SeleniumStatus>
     {
         try {
             var status = httpClient.get<SeleniumStatus>("http://${host.hostname}:${hub.port}/wd/hub/status")
             return ServiceState.Online(status)
-        } catch (e : Exception)
+        } catch (e : Throwable)
         {
             return ServiceState.Offline
         }
@@ -57,7 +69,7 @@ class GridRepo(
             //TODO: Is it actually connected to Hub?
             status.connected = true
             return ServiceState.Online(status)
-        } catch (e : Exception)
+        } catch (e : Throwable)
         {
             return ServiceState.Offline
         }
@@ -68,7 +80,17 @@ class GridRepo(
         try {
             val status = httpClient.get<ScreenRecorderStatus>("http://${host.hostname}:${screenrecorder.port}/status")
             return ServiceState.Online(status)
-        } catch (e : Exception)
+        } catch (e : Throwable)
+        {
+            return ServiceState.Offline
+        }
+    }
+    suspend fun getWinAppDriverState(host : Host, winAppDriver: Service.WinAppDriver) : ServiceState<WinAppDriverStats>
+    {
+        try {
+            val status = httpClient.get<WinAppDriverStats>("http://${host.hostname}:${winAppDriver.port}/status")
+            return ServiceState.Online(status)
+        } catch (e : Throwable)
         {
             return ServiceState.Offline
         }
