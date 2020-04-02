@@ -19,16 +19,25 @@ class GridRepo(
         hosts.add(host)
     }
 
-    fun addServiceToHost(hostname : String, service : Service)
+    fun addServiceToHost(host: Host, service : Service)
     {
-        hosts.find { it.hostname == hostname }?.services?.apply {
+       host.services.apply {
             add(service)
         }
     }
 
     fun getHosts() = hosts
 
-    suspend fun getCurrentSessionIdForService(service : Service) : String?
+    suspend fun getCurrentSessionIdForService(host : Host, service : Service) : String?
+    {
+
+    }
+
+    suspend fun updateSessionIdForService(host: Host, service : Service, sessionId : String)
+    {
+
+    }
+    suspend fun removeSessionForService(host : Host, service : Service)
     {
 
     }

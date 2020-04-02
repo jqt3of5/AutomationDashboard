@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="Making Services work">
+    <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="Building out the grid repo properly.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/src/ApiResponses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/ApiResponses.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ktor/src/GridModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/GridModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/src/GridObjects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/GridObjects.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ktor/src/GridRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/GridRepo.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -604,7 +602,7 @@
     <configuration name="GetTests#11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Ktor/test/GetTests.http" index="11" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="ApplicationKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationKt (1)" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="AutomationDashboard.Ktor.main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -617,7 +615,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationKt" type="JetRunConfigurationType" nameIsGenerated="true">
+    <configuration name="ApplicationKt" type="JetRunConfigurationType" factoryName="Kotlin" nameIsGenerated="true">
       <module name="com.example.AutomationDashboard.Ktor.main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
