@@ -6,14 +6,15 @@
       <GradleProjectSettings>
         <option name="delegatedBuild" value="true" />
         <option name="testRunner" value="GRADLE" />
-        <option name="disableWrapperSourceDistributionNotification" value="true" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="14" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Ktor" />
             <option value="$PROJECT_DIR$/React" />
+            <option value="$PROJECT_DIR$/ReactK" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

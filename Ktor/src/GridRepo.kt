@@ -30,7 +30,7 @@ class GridRepo(
 
     suspend fun getCurrentSessionIdForService(host : Host, service : Service) : String?
     {
-
+        return "sessionId"
     }
 
     suspend fun updateSessionIdForService(host: Host, service : Service, sessionId : String)

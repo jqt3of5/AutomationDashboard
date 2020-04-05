@@ -10,8 +10,6 @@ import io.ktor.request.receive
 import io.ktor.response.respond
 import io.ktor.routing.*
 
-
-@Suppress("unused") // Referenced in application.conf
 fun Application.gridModule(gridRepo : GridRepo)
 {
     routing {
@@ -51,102 +49,107 @@ fun Application.gridModule(gridRepo : GridRepo)
                             }?: call.respond(Error("No host with name ${call.parameters["name"]}"))
                         }
                     }
-                    route("/service")
-                    {
-                        serviceApi(gridRepo)
-                    }
+                    registerServiceApi(gridRepo)
                 }
             }
         }
     }
 }
 
-
-fun Route.serviceApi(gridRepo : GridRepo)
-{
-    fun ApplicationCall.host() : Host? {
+fun Route.registerServiceApi(gridRepo : GridRepo) {
+    fun ApplicationCall.host(): Host? {
         return parameters["host"]?.let { hostname ->
             gridRepo.getHosts().find { it.hostname == hostname }
         }
     }
 
-    fun ApplicationCall.service() : Service? {
+    fun ApplicationCall.service(): Service? {
 
-       return host()?.let {
-           parameters["service"]?.let { name ->
-               it.services.find { it::class.simpleName?.toLowerCase() == name.toLowerCase() }
-           }
-       }
-    }
-    route("/{service}")
-    {
-        post {
-            val servicename = call.parameters["service"]
-            when (servicename)
-             {
-                "hub" -> {
-                    call.host()?.let {
-                        val hub = call.receive<Service.Hub>()
-                        gridRepo.addServiceToHost(it, hub)
-                    }?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
-                }
-                "node" -> {
-                    call.host()?.let {
-                        val node = call.receive<Service.Node>()
-                        gridRepo.addServiceToHost(it, node)
-                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
-                }
-                "screenrecorder" -> {
-                    call.host()?.let {
-                        val recorder = call.receive<Service.ScreenRecorder>()
-                        gridRepo.addServiceToHost(it, recorder)
-                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
-                }
-                "winappdriver" -> {
-                call.host()?.let {
-                    val driver = call.receive<Service.WinAppDriver>()
-                        gridRepo.addServiceToHost(it, driver)
-                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
-               }
+        return host()?.let {
+            parameters["service"]?.let { name ->
+                it.services.find { it::class.simpleName?.toLowerCase() == name.toLowerCase() }
             }
         }
-        route ("/session")
+    }
+    route("/service")
+    {
+        route("/{service}")
         {
-            get {
-                    call.host()?.let {host ->
+            post {
+                val servicename = call.parameters["service"]
+                when (servicename) {
+                    "hub" -> {
+                        call.host()?.let {
+                            val hub = call.receive<Service.Hub>()
+                            gridRepo.addServiceToHost(it, hub)
+                        } ?: call.respond(
+                            HttpStatusCode.NotFound,
+                            Error("Host ${call.parameters["host"]} not found")
+                        )
+                    }
+                    "node" -> {
+                        call.host()?.let {
+                            val node = call.receive<Service.Node>()
+                            gridRepo.addServiceToHost(it, node)
+                        } ?: call.respond(
+                            HttpStatusCode.NotFound,
+                            Error("Host ${call.parameters["host"]} not found")
+                        )
+                    }
+                    "screenrecorder" -> {
+                        call.host()?.let {
+                            val recorder = call.receive<Service.ScreenRecorder>()
+                            gridRepo.addServiceToHost(it, recorder)
+                        } ?: call.respond(
+                            HttpStatusCode.NotFound,
+                            Error("Host ${call.parameters["host"]} not found")
+                        )
+                    }
+                    "winappdriver" -> {
+                        call.host()?.let {
+                            val driver = call.receive<Service.WinAppDriver>()
+                            gridRepo.addServiceToHost(it, driver)
+                        } ?: call.respond(
+                            HttpStatusCode.NotFound,
+                            Error("Host ${call.parameters["host"]} not found")
+                        )
+                    }
+                }
+            }
+            route("/session")
+            {
+                get {
+                    call.host()?.let { host ->
                         call.service()?.let { service ->
                             val sessionId = gridRepo.getCurrentSessionIdForService(host, service)
                             sessionId?.let {
                                 call.respond(ObjectId(ObjectType.Session, sessionId))
-                            }?: call.respond(Error("No Active Session"))
-                        } ?: call.respond(HttpStatusCode.BadRequest, Error("Host ${host.hostname} does not have service ${call.parameters["service"]}"))
-                    } ?:  call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
+                            } ?: call.respond(Error("No Active Session"))
+                        } ?: call.respond(
+                            HttpStatusCode.BadRequest,
+                            Error("Host ${host.hostname} does not have service ${call.parameters["service"]}")
+                        )
+                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
+                }
+
+                delete {
+                    call.host()?.let { host ->
+                        call.service()?.let { service ->
+                            gridRepo.removeSessionForService(host, service)
+                            call.respond("")
+                        } ?: call.respond(
+                            HttpStatusCode.NotFound,
+                            Error("Host ${host.hostname} does not have service ${call.parameters["service"]}")
+                        )
+                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
                 }
             }
-            post {
-                    call.host()?.let {host ->
-                        call.service()?.let {service ->
-                            val sessionId = call.receive<String>()
-                            gridRepo.updateSessionIdForService(host, service, sessionId)
-                            call.respond(ObjectId(ObjectType.Session, sessionId))
-                        } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${host.hostname} does not have service ${call.parameters["service"]}"))
-                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
-            }
-            delete {
-                call.host()?.let {host ->
-                    call.service()?.let {service ->
-                        gridRepo.removeSessionForService(host, service)
-                        call.respond("")
-                    } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${host.hostname} does not have service ${call.parameters["service"]}"))
-                } ?: call.respond(HttpStatusCode.NotFound, Error("Host ${call.parameters["host"]} not found"))
-            }
-        }
 
-        route ("/state")
-        {
-            get {
-                    call.host()?.let {host ->
-                        call.service()?.let {service ->
+            route("/state")
+            {
+                get {
+                    call.host()?.let { host ->
+                        call.service()?.let { service ->
                             var state = gridRepo.getServiceState(host, service)
                             call.respond(state)
                         }

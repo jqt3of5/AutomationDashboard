@@ -15,9 +15,7 @@ import io.ktor.routing.route
 import io.ktor.routing.routing
 import io.ktor.serialization.json
 
-@Suppress("unused") // Referenced in application.conf
-@kotlin.jvm.JvmOverloads
-fun Application.testsModule(testing: Boolean = false) {
+fun Application.testsModule(testRepo : TestRepo) {
 
     routing {
         route("/api") {

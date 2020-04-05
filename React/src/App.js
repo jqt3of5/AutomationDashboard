@@ -8,6 +8,7 @@ import TestRunDetails from "./TestRunDetails";
 import TestList from "./TestList";
 import FixtureList from "./FixtureList";
 import {TestDetails} from "./TestDetails";
+import GridStatusDetails from "./GridStatusDetails";
 import SettingsIcon from '@material-ui/icons/Settings';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import AssignmentIcon from '@material-ui/icons/Assignment';
@@ -44,6 +45,13 @@ class App extends React.Component
                                 <p>{"Test Runs"}</p>
                             </div>
                         </NavLink>
+                        <NavLink to={"/grid"}>
+                            <div className={"sidebar-item"}>
+                                <div className={"selected-ribbon"}></div>
+                                <DoubleArrowIcon className={"sidebar-icon"}/>
+                                <p>{"Grid"}</p>
+                            </div>
+                        </NavLink>
                         <NavLink to={"/preferences"} className={"end-sidebar-item"}>
                             <div className={"sidebar-item"}>
                                 <div className={"selected-ribbon"}></div>
@@ -62,6 +70,8 @@ class App extends React.Component
 
                             <Route exact path={"/testruns"} component={TestRuns}/>
                             <Route exact path={"/testruns/:testrunid"} component={TestRunDetails}/>
+
+                            <Route exact path={"/grid"} component={GridStatusDetails}/>
 
                             <Route exact path={"/preferences"}/>
                         </Switch>

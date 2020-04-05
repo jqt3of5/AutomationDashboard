@@ -13,7 +13,6 @@ import io.ktor.serialization.json
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 
-
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused") // Referenced in application.conf
@@ -35,6 +34,13 @@ fun Application.module()
         json(Json(context = gridModule))
     }
 
+
+    var testRepo = TestRepo()
+    runsModule(testRepo)
+    testsModule(testRepo)
+
+    val gridRepo = GridRepo(httpClient)
+    gridModule(gridRepo)
 }
 
 val httpClient = HttpClient(Apache){
