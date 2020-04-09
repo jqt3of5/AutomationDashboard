@@ -95,15 +95,4 @@ function XIcon(props) {
         </g>
     </svg>)
 }
-function Header (props){
-    return (
-        <div>
-            <div className={"content-header"}>
-                <p className={"content-header-inner"}>{props.title}</p>
-            </div>
-        </div>
-
-    )
-}
-
 export default App;

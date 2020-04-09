@@ -5,7 +5,6 @@
       <module name="AutomationDashboard.Ktor" target="14" />
       <module name="AutomationDashboard.Ktor.main" target="14" />
       <module name="AutomationDashboard.Ktor.test" target="14" />
-      <module name="AutomationDashboard.ReactK" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>

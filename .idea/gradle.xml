@@ -14,7 +14,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Ktor" />
             <option value="$PROJECT_DIR$/React" />
-            <option value="$PROJECT_DIR$/ReactK" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

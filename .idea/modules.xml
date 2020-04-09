@@ -7,9 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Ktor/AutomationDashboard.Ktor.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/React/AutomationDashboard.React.iml" filepath="$PROJECT_DIR$/.idea/modules/React/AutomationDashboard.React.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReactK/AutomationDashboard.ReactK.iml" filepath="$PROJECT_DIR$/.idea/modules/ReactK/AutomationDashboard.ReactK.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReactK/AutomationDashboard.ReactK.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ReactK/AutomationDashboard.ReactK.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReactK/AutomationDashboard.ReactK.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ReactK/AutomationDashboard.ReactK.test.iml" />
     </modules>
   </component>
 </project>

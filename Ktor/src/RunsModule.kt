@@ -97,7 +97,7 @@ fun Route.registerFixtureApi(testRepo : TestRepo)
             {
                 get {
                     call.fixtureRunId()?.let {
-                        testRepo.getSessionForFixture(it)?.let {
+                        testRepo.getSessionForFixtureRun(it)?.let {
                             call.respond(it)
                         } ?: call.respond(HttpStatusCode.NotFound, Error("FixtureRun with id does not have session"))
                     } ?: call.respond(HttpStatusCode.NotFound, Error("Could not find fixturerun with id"))

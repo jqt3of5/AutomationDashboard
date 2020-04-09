@@ -60,21 +60,28 @@ data class TestStep(
     val testRunId : String,
     val action: String,
     val actionParams : String,
+
     val beforeImageURL : String,
-    val beforePageSource : String,
-    val elementFindBy : String,
-    val elementLocator : String,
-    val actionStart : Long,
-    val actionEnd : Long,
-    val failedReason : String,
-    val foundElementImageURL : String,
-    val imageOfElement : String,
-    val pageClassName : String,
-    val elementPropertyName : String,
+    val beforePageSourceXML : String,
+
     val sourceFileName : String,
     val sourceLineNumber : Int,
-    val targetProcessMemoryUsage : Int,
-    val testMemoryUsage : Int
+    val elementPropertyName : String,
+    val pageClassName : String,
+    val elementFindBy : String,
+    val elementLocator : String,
+
+    val actionStart : Long
+
+    //Post Action values
+    //val actionEnd : Long,
+    //val failedReason : String,
+    //val foundElementImageURL : String,
+    //val imageOfElement : String,
+
+    //General Statistics
+    //val targetProcessMemoryUsage : Int,
+    //val testMemoryUsage : Int
 )
 
 class TestRepo {
@@ -82,7 +89,6 @@ class TestRepo {
     private val TestRuns : MutableList<TestRun> = mutableListOf()
     private val TestSteps : MutableList<TestStep> = mutableListOf()
     private val sessions : MutableList<Session> = mutableListOf()
-
 
     fun addTestFixtureRun(fixture: FixtureRun)
     {
@@ -98,7 +104,7 @@ class TestRepo {
     {
         sessions.add(session)
     }
-    fun getSessionForFixture(fixtureRunId : String) : Session?
+    fun getSessionForFixtureRun(fixtureRunId : String) : Session?
     {
        return sessions.find { it.fixtureRunId == fixtureRunId }
     }

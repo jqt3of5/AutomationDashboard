@@ -19,71 +19,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="Building out the grid repo properly.">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ReactK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_extensions_1_0_1_pre_94_kotlin_1_3_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_71.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_js_1_3_71.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_test_annotations_common_1_3_71.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_test_common_1_3_71.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_test_js_1_3_71.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_react_16_13_0_pre_94_kotlin_1_3_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_react_dom_16_13_0_pre_94_kotlin_1_3_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_react_router_dom_4_3_1_pre_93_kotlin_1_3_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_common_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_js_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_html_js_0_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/React/src/GridStatusDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/kotlin/Table.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/kotlin/app.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/kotlin/main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/Table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/TestList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/TestRuns.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/TestSteps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReactK/src/main/resources/index.html" afterDir="false" />
+    <list default="true" id="f36f595d-1524-4187-aeaa-1037cb3fc870" name="Default Changelist" comment="Adding a new Kotlin to JS project and starting to convert over the old React webpage">
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_javax_servlet_api_3_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_client_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_client_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_common_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_common_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_hpack_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_hpack_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_http_client_transport_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_http_client_transport_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_server_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_http2_http2_server_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_client_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_client_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_java_client_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_java_client_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_java_server_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_java_server_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_openjdk8_client_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_openjdk8_client_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_openjdk8_server_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_openjdk8_server_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_server_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_alpn_server_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_client_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_client_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_continuation_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_continuation_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_http_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_http_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_io_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_io_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_server_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_server_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_servlets_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_servlets_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_util_9_4_24_v20191120.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_eclipse_jetty_jetty_util_9_4_24_v20191120.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mortbay_jetty_alpn_alpn_boot_8_1_13_v20181017.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mortbay_jetty_alpn_alpn_boot_8_1_13_v20181017.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_extensions_1_0_1_pre_94_kotlin_1_3_70.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_71.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_js_1_3_71.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_test_annotations_common_1_3_71.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_test_common_1_3_71.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_test_js_1_3_71.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_react_16_13_0_pre_94_kotlin_1_3_70.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_react_dom_16_13_0_pre_94_kotlin_1_3_70.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_react_router_dom_4_3_1_pre_93_kotlin_1_3_70.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_common_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_js_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_html_js_0_7_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/resources/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/resources/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/src/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/src/GridModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/GridModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/src/GridRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/GridRepo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ktor/src/RunsModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/RunsModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ktor/src/TestsModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/TestsModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ktor/src/TestRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Ktor/src/TestRepo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/React/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/kotlin/Table.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/kotlin/app.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/kotlin/main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/Table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/TestList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/TestRuns.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/TestSteps.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactK/src/main/resources/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,40 +89,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
-                <item name="Ktor" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
-                <item name="Ktor" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
-                <item name="React" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
-                <item name="ReactK" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
-                <item name="ReactK" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AutomationDashboard" type="f1a62948:ProjectNode" />
-                <item name="ReactK" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -169,6 +103,7 @@
         <option value="HTTP Request" />
         <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Script" />
       </list>
     </option>
   </component>
@@ -209,7 +144,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15039062" />
     <property name="project.structure.side.proportion" value="0.26956522" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -650,7 +585,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ReactK Run">
+  <component name="RunManager" selected="Gradle.AutomationDashboard [kotlinNpmInstall]">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="replType" value="NREPL" />
       <setting name="execution" value="LEININGEN" />
@@ -668,6 +603,63 @@
       <setting name="replType" value="SOCKET" />
       <setting name="configType" value="SPECIFY" />
       <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AutomationDashboard [kotlinNodeJsSetup]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="kotlinNodeJsSetup" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AutomationDashboard [kotlinNpmInstall]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="kotlinNpmInstall" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AutomationDashboard [packageJson]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="packageJson" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <configuration name="ReactK Run" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -689,27 +681,8 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppiumRequests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Ktor/test/AppiumRequests.http" index="2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="GetTests#10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Ktor/test/GetTests.http" index="10" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="GetTests#11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/Ktor/test/GetTests.http" index="11" runType="Run single request">
       <method v="2" />
-    </configuration>
-    <configuration name="ApplicationKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="AutomationDashboard.Ktor.main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.example.ApplicationKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="ApplicationKt" type="JetRunConfigurationType" nameIsGenerated="true">
       <module name="com.example.AutomationDashboard.Ktor.main" />
@@ -728,19 +701,19 @@
       <item itemvalue="Gradle.React Run [Node]" />
       <item itemvalue="Gradle.Build React" />
       <item itemvalue="Gradle.ReactK Run" />
-      <item itemvalue="HTTP Request.AppiumRequests#2" />
-      <item itemvalue="HTTP Request.GetTests#10" />
+      <item itemvalue="Gradle.AutomationDashboard [kotlinNpmInstall]" />
+      <item itemvalue="Gradle.AutomationDashboard [packageJson]" />
+      <item itemvalue="Gradle.AutomationDashboard [kotlinNodeJsSetup]" />
       <item itemvalue="HTTP Request.GetTests#11" />
       <item itemvalue="Kotlin.ApplicationKt" />
-      <item itemvalue="Kotlin.ApplicationKt (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AutomationDashboard [kotlinNodeJsSetup]" />
+        <item itemvalue="Gradle.AutomationDashboard [packageJson]" />
+        <item itemvalue="Gradle.AutomationDashboard [kotlinNpmInstall]" />
         <item itemvalue="Gradle.ReactK Run" />
         <item itemvalue="HTTP Request.GetTests#11" />
-        <item itemvalue="HTTP Request.GetTests#10" />
-        <item itemvalue="Kotlin.ApplicationKt (1)" />
-        <item itemvalue="HTTP Request.AppiumRequests#2" />
       </list>
     </recent_temporary>
   </component>
@@ -772,7 +745,11 @@
       <workItem from="1586065723477" duration="3816000" />
       <workItem from="1586069585126" duration="357000" />
       <workItem from="1586099985741" duration="3773000" />
-      <workItem from="1586115817799" duration="3979000" />
+      <workItem from="1586115817799" duration="6717000" />
+      <workItem from="1586220000025" duration="7099000" />
+      <workItem from="1586312443856" duration="1011000" />
+      <workItem from="1586313778075" duration="1739000" />
+      <workItem from="1586315566222" duration="10853000" />
     </task>
     <task id="LOCAL-00001" summary="Moved react to be a subfolder of the server">
       <created>1583644112737</created>
@@ -830,7 +807,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585443513108</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adding a new Kotlin to JS project and starting to convert over the old React webpage">
+      <created>1586120231033</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586120231033</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -871,7 +855,8 @@
     <MESSAGE value="Sessions are a unique id + hub + node. The test should notify the api of the session, and we'll store it for use." />
     <MESSAGE value="Use the repo more correctly, and moved around a couple of end points." />
     <MESSAGE value="Making Services work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making Services work" />
+    <MESSAGE value="Adding a new Kotlin to JS project and starting to convert over the old React webpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a new Kotlin to JS project and starting to convert over the old React webpage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="484" y="0" key="#ApplicationKt" timestamp="1583688673519">
@@ -905,10 +890,10 @@
       <screen x="-3840" y="-885" width="2560" height="1400" />
     </state>
     <state x="-2804" y="-481" key="#xdebugger.evaluate/0.0.1920.1040/-3840.-885.2560.1400@-3840.-885.2560.1400" timestamp="1585413465395" />
-    <state x="238" y="4" width="799" height="820" key="CommitChangelistDialog2" timestamp="1585017791241">
+    <state x="238" y="4" width="799" height="820" key="CommitChangelistDialog2" timestamp="1586120148266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="238" y="4" width="799" height="820" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585017791241" />
+    <state x="238" y="4" width="799" height="820" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586120148266" />
     <state width="424" height="466" key="DebuggerActiveHint" timestamp="1585413443983">
       <screen x="-3840" y="-885" width="2560" height="1400" />
     </state>
@@ -921,28 +906,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="568" y="102" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586069858119" />
-    <state width="1493" height="247" key="GridCell.Tab.0.bottom" timestamp="1586106421531">
+    <state width="1493" height="247" key="GridCell.Tab.0.bottom" timestamp="1586224920955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586106421531" />
+    <state width="1493" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586224920955" />
     <state width="2517" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1040/-3840.-885.2560.1400@-3840.-885.2560.1400" timestamp="1585510564806" />
     <state width="2517" height="400" key="GridCell.Tab.0.bottom/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584917552986" />
-    <state width="1493" height="247" key="GridCell.Tab.0.center" timestamp="1586106421531">
+    <state width="1493" height="247" key="GridCell.Tab.0.center" timestamp="1586224920955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586106421531" />
+    <state width="1493" height="247" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586224920955" />
     <state width="2517" height="400" key="GridCell.Tab.0.center/0.0.1920.1040/-3840.-885.2560.1400@-3840.-885.2560.1400" timestamp="1585510564806" />
     <state width="2517" height="400" key="GridCell.Tab.0.center/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584917552986" />
-    <state width="1493" height="247" key="GridCell.Tab.0.left" timestamp="1586106421531">
+    <state width="1493" height="247" key="GridCell.Tab.0.left" timestamp="1586224920955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586106421531" />
+    <state width="1493" height="247" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586224920955" />
     <state width="2517" height="400" key="GridCell.Tab.0.left/0.0.1920.1040/-3840.-885.2560.1400@-3840.-885.2560.1400" timestamp="1585510564806" />
     <state width="2517" height="400" key="GridCell.Tab.0.left/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584917552986" />
-    <state width="1493" height="247" key="GridCell.Tab.0.right" timestamp="1586106421531">
+    <state width="1493" height="247" key="GridCell.Tab.0.right" timestamp="1586224920955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586106421531" />
+    <state width="1493" height="247" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586224920955" />
     <state width="2517" height="400" key="GridCell.Tab.0.right/0.0.1920.1040/-3840.-885.2560.1400@-3840.-885.2560.1400" timestamp="1585510564806" />
     <state width="2517" height="400" key="GridCell.Tab.0.right/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584917552986" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1585510562780">
@@ -983,10 +968,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="249" width="682" height="362" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1586069648499" />
-    <state x="193" y="95" width="1243" height="710" key="SettingsEditor" timestamp="1586100072718">
+    <state x="192" y="62" width="1243" height="710" key="SettingsEditor" timestamp="1586315533252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="193" y="95" width="1243" height="710" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586100072718" />
+    <state x="192" y="62" width="1243" height="710" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586315533252" />
     <state x="423" y="17" key="SettingsEditor/3840.1093.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1584892107559" />
     <state x="657" y="327" key="VCS.EditChangelistDialog" timestamp="1583803499337">
       <screen x="0" y="0" width="1536" height="824" />
