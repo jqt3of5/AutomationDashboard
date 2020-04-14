@@ -5,6 +5,9 @@
       <module name="AutomationDashboard.Ktor" target="14" />
       <module name="AutomationDashboard.Ktor.main" target="14" />
       <module name="AutomationDashboard.Ktor.test" target="14" />
+      <module name="com.example.AutomationDashboard.Ktor" target="14" />
+      <module name="com.example.AutomationDashboard.Ktor.main" target="14" />
+      <module name="com.example.AutomationDashboard.Ktor.test" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>

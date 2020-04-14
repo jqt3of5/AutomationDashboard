@@ -37,8 +37,8 @@ fun Route.registerTestApi(testRepo: TestRepo)
     route("/testrun") {
         post {
             var testrun = call.receive<TestRun>()
-            testRepo.addTestRun(testrun)
-            call.respond(HttpStatusCode.OK, ObjectId(ObjectType.Test, testrun.testRunId))
+            var runId = testRepo.addTestRun(testrun)
+            call.respond(HttpStatusCode.OK, ObjectId(ObjectType.Test, runId))
         }
         route("/{testrunid}")
         {
@@ -61,8 +61,25 @@ fun Route.registerTestApi(testRepo: TestRepo)
             {
                 post {
                     var teststep = call.receive<TestStep>()
-                    testRepo.addTestStep(teststep)
-                    call.respond(HttpStatusCode.OK, ObjectId(ObjectType.TestStep, teststep.testStepId))
+                    var stepId = testRepo.addTestStep(teststep)
+                    call.respond(HttpStatusCode.OK, ObjectId(ObjectType.TestStep, stepId))
+                }
+                route ("/{stepid}")
+                {
+                   post {
+                      call.parameters["stepid"]?.let {
+                            var result = call.receive<StepResult>()
+                            testRepo.setResultForTestStep(it, result)
+                            call.respond("OK")
+                      } ?: call.respond(HttpStatusCode.BadRequest, "Could not find step with id")
+                   }
+                    get {
+                        call.parameters["stepid"]?.let {
+                            testRepo.getTestStepForId(it)?.let {
+                                call.respond(it)
+                            }
+                        } ?: call.respond(HttpStatusCode.BadRequest, "Could not find step with id")
+                    }
                 }
             }
         }
@@ -89,7 +106,7 @@ fun Route.registerFixtureApi(testRepo : TestRepo)
         route("/{fixturerunid}")
         {
             get {
-                call.fixtureRunId()?.let {
+                call.fixtureRun()?.let {
                     call.respond(it)
                 } ?: call.respond(HttpStatusCode.NotFound, Error("Could not find fixture run with id"))
             }
@@ -119,7 +136,8 @@ fun Route.registerFixtureApi(testRepo : TestRepo)
             {
                 get {
                     call.fixtureRunId()?.let {
-                        call.respond(it)
+                        var testRuns = testRepo.getTestRunsForFixtureRun(it)
+                        call.respond(testRuns)
                     } ?: call.respond(HttpStatusCode.BadRequest, Error("Could not find tests for fixture id"))
                 }
             }

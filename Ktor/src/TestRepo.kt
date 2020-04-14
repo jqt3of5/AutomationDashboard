@@ -30,7 +30,6 @@ data class FixtureRun(
     val fixtureName : String,
     val sourceBranch : Branch,
     val targetBuild : Build,
-    val automationHub : String,
     val buildAgent : String,
     val start : Long,
     val videoURL : String? = null
@@ -55,11 +54,26 @@ data class TestRun(
 )
 
 @Serializable
+sealed class StepResult
+{
+    @Serializable
+    data class FailedToActivateWindow(val message : String,val end : Long) : StepResult()
+    @Serializable
+    data class FailedToObtainElement(val windowTitle: String, val windowName: String, val message : String,val end : Long) : StepResult()
+    @Serializable
+    data class FailedAction(val windowTitle: String, val windowName: String,val elementId: String, val message : String,val end : Long) : StepResult()
+
+    @Serializable
+    data class SuccessActionResult(val windowTitle: String, val windowName: String,val elementId: String,val result : String?,val end : Long) : StepResult()
+}
+
+@Serializable
 data class TestStep(
     val testStepId : String,
+
     val testRunId : String,
-    val action: String,
-    val actionParams : String,
+    val method: String,
+    val methodParams : String,
 
     val beforeImageURL : String,
     val beforePageSourceXML : String,
@@ -71,7 +85,10 @@ data class TestStep(
     val elementFindBy : String,
     val elementLocator : String,
 
-    val actionStart : Long
+    val actionStart : Long,
+
+    //Step result, or action result
+    @Polymorphic var stepResult : StepResult? = null
 
     //Post Action values
     //val actionEnd : Long,
@@ -90,9 +107,10 @@ class TestRepo {
     private val TestSteps : MutableList<TestStep> = mutableListOf()
     private val sessions : MutableList<Session> = mutableListOf()
 
-    fun addTestFixtureRun(fixture: FixtureRun)
+    fun addTestFixtureRun(fixture: FixtureRun) : String
     {
         FixtureRuns.add(fixture)
+        return fixture.fixtureRunId
     }
     fun getTestFixtureRun(fixtureId : String) : FixtureRun?
     {
@@ -104,13 +122,15 @@ class TestRepo {
     {
         sessions.add(session)
     }
+
     fun getSessionForFixtureRun(fixtureRunId : String) : Session?
     {
        return sessions.find { it.fixtureRunId == fixtureRunId }
     }
-    fun addTestRun(test : TestRun)
+    fun addTestRun(test : TestRun) : String
     {
-         TestRuns.add(test)
+        TestRuns.add(test)
+        return test.testRunId
     }
     fun getTestRunsForFixtureRun(fixtureRunId : String) : List<TestRun>
     {
@@ -120,9 +140,22 @@ class TestRepo {
     {
         return TestRuns.find { it.testRunId == testRunId }
     }
-    fun addTestStep(step : TestStep)
+    fun addTestStep(step : TestStep) : String
     {
         TestSteps.add(step)
+        return step.testStepId
+    }
+
+    fun getTestStepForId(stepId : String) : TestStep?
+    {
+        return TestSteps.find { it.testStepId == stepId }
+    }
+    fun setResultForTestStep(stepId : String, result : StepResult)
+    {
+        TestSteps.find { it.testStepId == stepId }?.let {
+
+            it.stepResult = result
+        }
     }
     fun getTestStepsForTestRun(testRunId : String) : List<TestStep>
     {

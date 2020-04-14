@@ -1,27 +1,12 @@
 package com.example
 
-import kotlinx.serialization.PolymorphicSerializer
+import kotlinx.serialization.Polymorphic
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.modules.SerializersModule
-
-val gridModule = SerializersModule {
-    polymorphic(Service::class) {
-        Service.Hub::class with Service.Hub.serializer()
-        Service.Node::class with Service.Node.serializer()
-        Service.ScreenRecorder::class with Service.ScreenRecorder.serializer()
-        Service.WinAppDriver::class with Service.WinAppDriver.serializer()
-    }
-    polymorphic(ServiceState::class) {
-        ServiceState.Offline::class with ServiceState.Offline.serializer()
-        ServiceState.Unknown::class with ServiceState.Unknown.serializer()
-        ServiceState.Online::class with ServiceState.Online.serializer(PolymorphicSerializer(Status::class))
-    }
-}
 
 class Host(
     val id : String,
     val hostname : String,
-    val services : MutableList<Service>
+    @Polymorphic val services : MutableList<Service>
 )
 
 sealed class ServiceState<out T : Status>{
@@ -45,7 +30,7 @@ sealed class Service {
 }
 
 @Serializable
-open class Status
+sealed class Status
 
 data class WinAppDriverStats(
     val something: String

@@ -9,68 +9,108 @@ content-type: application/json
 
 {
   "fixtureRunId": "fixtureRunId1",
-  "targetBranches": [
-    {
-      "repo": "Xactimate.Android",
-      "name": "bugfix/branchA",
-      "commit":"234234234234"
-    },
-    {
-      "repo": "Xactimate.Shared",
-      "name": "bugfix/BranchB",
-      "commit":"w452345345"
-    }
-  ],
-  "start": 123456,
-  "end": 123459,
-  "automationAgent": "Agent6"
+  "fixtureName": "MyFixture",
+  "sourceBranch": {
+    "name": "develop",
+    "commit": "1234q345345",
+    "repo": "Xm8"
+  },
+  "targetBuild": {
+    "configuration": "US Release",
+    "number": 123,
+    "branches": [{
+      "name": "develop",
+      "commit": "1234q345345",
+      "repo": "Xm8"
+    }]
+  },
+  "buildAgent": "Venom",
+  "start": 12345
 }
 
 ###
-GET http://localhost:8080/api/fixturerun/fixtureRunId1/testruns
+
+POST http://localhost:8080/api/fixturerun/fixtureRunId1/session
 content-type: application/json
+
+{
+  "fixtureRunId": "fixtureRunId1",
+  "sessionId": "123423453",
+  "hubName": "Venom",
+  "nodeName": "Node"
+}
 ###
-GET http://localhost:8080/api/testrun/testRunId1
-content-type: application/json
+
+GET http://localhost:8080/api/fixturerun/fixtureRunId1/session
 ###
+
 POST http://localhost:8080/api/testrun/
 content-type: application/json
 
-{"testRunId": "testRunId1", "fixtureRunId": "fixtureRunId1", "start": 1234, "end": 12345, "testParams": "asdfasdf", "videoURL": "asdf", "testStatus": "Pass"}
+{
+  "testRunId": "testRunId1",
+  "fixtureRunId": "fixtureRunId1",
+  "testType": "Test",
+  "testParams": "",
+  "start": 1234
+}
 ###
-GET http://localhost:8080/api/testrun/testRunId1/steps
+
+GET http://localhost:8080/api/fixturerun/fixtureRunId1/testruns
 content-type: application/json
 ###
-GET http://localhost:8080/api/teststep/testStepId1
+
+GET http://localhost:8080/api/testrun/testRunId1
 content-type: application/json
 ###
-POST http://localhost:8080/api/teststep/
+
+POST http://localhost:8080/api/testrun/testRunId1/teststep/
 content-type: application/json
 
 {
   "testStepId": "testStepId1",
   "testRunId": "testRunId1",
-  "action": "Click",
-  "actionParams": "",
+  "method": "Click",
+  "methodParams": "",
   "beforeImageURL": "imageURL",
+  "beforePageSourceXML": "pagesource",
   "elementFindBy": "id",
   "elementLocator": "_asdf",
-  "actionStart": 12345,
-  "actionEnd": 123456,
-  "failedReason": "idk",
-  "foundElementImageURL": "elementImageURL",
-  "imageOfElement": "image",
+  "actionStart": 12344,
   "pageClassName": "ProfilePage",
   "elementPropertyName": "NextButton",
   "sourceFileName": "ProfilePage.cs",
-  "sourceLineNumber": 12,
-  "targetProcessMemoryUsage": 1234,
-  "testMemoryUsage": 123
+  "sourceLineNumber": 11
 }
 ###
 
-GET http://localhost:8080/api/hubs
+GET http://localhost:8080/api/testrun/testRunId1/steps
+content-type: application/json
 ###
-GET http://localhost:4444/wd/hub/status
 
+POST http://localhost:8080/api/testrun/testRunId1/teststep/testStepId1
+content-type: application/json
+
+{
+  "type": "com.example.StepResult.FailedToActivateWindow",
+  "message": "Failed to activate window",
+  "end": 123345
+}
+###
+
+POST http://localhost:8080/api/testrun/testRunId1/teststep/testStepId1
+content-type: application/json
+
+{
+  "type": "com.example.StepResult.SuccessActionResult",
+  "windowTitle": "Xactimate Estimate",
+  "windowName": "_xactimateCC",
+  "elementId": "123.sdf",
+  "result": "",
+  "end": 12345
+}
+###
+
+GET http://localhost:8080/api/testrun/testRunId1/teststep/testStepId1
+content-type: application/json
 ###

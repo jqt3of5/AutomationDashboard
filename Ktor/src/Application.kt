@@ -9,12 +9,35 @@ import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.features.CORS
 import io.ktor.features.ContentNegotiation
+import io.ktor.features.StatusPages
+import io.ktor.response.respond
 import io.ktor.serialization.json
+import kotlinx.serialization.PolymorphicSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
+import kotlinx.serialization.modules.SerializersModule
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
+val gridModule = SerializersModule {
+    polymorphic(Service::class) {
+        Service.Hub::class with Service.Hub.serializer()
+        Service.Node::class with Service.Node.serializer()
+        Service.ScreenRecorder::class with Service.ScreenRecorder.serializer()
+        Service.WinAppDriver::class with Service.WinAppDriver.serializer()
+    }
+    polymorphic(ServiceState::class) {
+        ServiceState.Offline::class with ServiceState.Offline.serializer()
+        ServiceState.Unknown::class with ServiceState.Unknown.serializer()
+        ServiceState.Online::class with ServiceState.Online.serializer(PolymorphicSerializer(Status::class))
+    }
+    polymorphic(StepResult::class) {
+        StepResult.FailedAction::class with StepResult.FailedAction.serializer()
+        StepResult.FailedToObtainElement::class with StepResult.FailedToObtainElement.serializer()
+        StepResult.FailedToActivateWindow::class with StepResult.FailedToActivateWindow.serializer()
+        StepResult.SuccessActionResult::class with StepResult.SuccessActionResult.serializer()
+    }
+}
 @Suppress("unused") // Referenced in application.conf
 fun Application.module()
 {
@@ -33,7 +56,12 @@ fun Application.module()
     {
         json(Json(context = gridModule))
     }
-
+    install(StatusPages)
+    {
+        exception<Throwable> {cause ->
+            call.respond(HttpStatusCode.BadRequest, Error("Exception in API. Cause: $cause"))
+        }
+    }
 
     var testRepo = TestRepo()
     runsModule(testRepo)

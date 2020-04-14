@@ -14,12 +14,7 @@ fun Application.gridModule(gridRepo : GridRepo)
 {
     routing {
 
-        install(StatusPages)
-        {
-            exception<Throwable> {cause ->
-               call.respond(HttpStatusCode.BadRequest, Error("Exception in Grid API. Cause: $cause"))
-            }
-        }
+
         route("/api") {
             route ("/hosts")
             {
@@ -73,49 +68,17 @@ fun Route.registerServiceApi(gridRepo : GridRepo) {
     }
     route("/service")
     {
+        post {
+            val service = call.receive<Service>()
+            call.host()?.let {
+                gridRepo.addServiceToHost(it, service)
+            } ?: call.respond(
+                HttpStatusCode.NotFound,
+                Error("Host ${call.parameters["host"]} not found")
+            )
+        }
         route("/{service}")
         {
-            post {
-                val servicename = call.parameters["service"]
-                when (servicename) {
-                    "hub" -> {
-                        call.host()?.let {
-                            val hub = call.receive<Service.Hub>()
-                            gridRepo.addServiceToHost(it, hub)
-                        } ?: call.respond(
-                            HttpStatusCode.NotFound,
-                            Error("Host ${call.parameters["host"]} not found")
-                        )
-                    }
-                    "node" -> {
-                        call.host()?.let {
-                            val node = call.receive<Service.Node>()
-                            gridRepo.addServiceToHost(it, node)
-                        } ?: call.respond(
-                            HttpStatusCode.NotFound,
-                            Error("Host ${call.parameters["host"]} not found")
-                        )
-                    }
-                    "screenrecorder" -> {
-                        call.host()?.let {
-                            val recorder = call.receive<Service.ScreenRecorder>()
-                            gridRepo.addServiceToHost(it, recorder)
-                        } ?: call.respond(
-                            HttpStatusCode.NotFound,
-                            Error("Host ${call.parameters["host"]} not found")
-                        )
-                    }
-                    "winappdriver" -> {
-                        call.host()?.let {
-                            val driver = call.receive<Service.WinAppDriver>()
-                            gridRepo.addServiceToHost(it, driver)
-                        } ?: call.respond(
-                            HttpStatusCode.NotFound,
-                            Error("Host ${call.parameters["host"]} not found")
-                        )
-                    }
-                }
-            }
             route("/session")
             {
                 get {
